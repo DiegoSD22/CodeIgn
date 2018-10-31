@@ -14,6 +14,9 @@ class BaseDatos extends CI_Model{
         if($query->num_rows()>0)return $query;
         else return false;
     }
+    function borrarUsuario($data){
+        $query= $this->db->delete('usuarios', array('id_user'=>$data));
+    }
 }
 
 ?>

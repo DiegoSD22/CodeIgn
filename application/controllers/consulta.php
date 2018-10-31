@@ -28,6 +28,18 @@ class Consulta extends CI_Controller {
         $this->load->view('invirtual/headers');
         $this->load->view('invirtual/bienvenido');
     }
+    function nuevoborrar(){
+        $this->load->view('invirtual/headers');
+        $this->load->view('sesion/formularioborrar');
+    }
+            function borrar(){
+        $data=array(
+            'id_user'=> $this->input->post('id_user')
+        );
+        $this->baseDatos->borrarUsuario($data);
+        $this->load->view('invirtual/headers');
+        $this->load->view('invirtual/bienvenido');
+    }
 
 }
 ?>
