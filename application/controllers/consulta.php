@@ -6,6 +6,8 @@ class Consulta extends CI_Controller {
         parent::__construct();
         $this->load->helper('form');
         $this->load->model('baseDatos');
+        $this->load->library(array('session','form_validation'));
+        $this->load->helper(array('url','form'));
         
     }
     function index(){
@@ -56,6 +58,30 @@ class Consulta extends CI_Controller {
         $this->baseDatos->actualizarUsuario($data);
         $this->load->view('invirtual/headers');
         $this->load->view('invirtual/bienvenido');
+    }
+    
+    function iniciosesion(){
+        $this->load->view('invirtual/headers');
+        $this->load->view('sesion/inicio');
+    }
+    
+    function sesion(){
+        $this->form_validation->set_rules('usuario', 'usuario', 'required');
+        $this->form_validation->set_rules('password', 'password', 'required');
+        
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('invirtual/error');
+        } else {
+            $usuario = $this->input->post('usuario');
+            $password = $this->input->post('password');
+            //comprobamos si existen en la base de datos enviando los datos al modelo
+            $login = $this->baseDatos->verificar($usuario, $password);
+            if ($login)
+            {
+                $this->load->view('invirtual/headers');
+                $this->load->view('invirtual/bienvenido');
+            }
+        }
     }
 
 }

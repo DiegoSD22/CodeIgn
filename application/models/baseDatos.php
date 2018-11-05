@@ -24,6 +24,20 @@ class BaseDatos extends CI_Model{
         $this->db->where('id_user', $data['id_user']);
         $this->db->update('usuarios');
     }
+    
+    function verificar($usuario, $password){
+        $this->db->where('usuario', $usuario);
+        $this->db->where('password', $password);
+        $query= $this->db->get('usuarios');
+        
+        if($query->num_rows()==1){
+            return $query->result();
+        }
+        else{
+            $this->load->view('invirtual/headers');
+            $this->load->view('invirtual/error');
+        }
+    }
 }
 
 ?>
