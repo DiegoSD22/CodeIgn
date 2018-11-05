@@ -15,7 +15,14 @@ class BaseDatos extends CI_Model{
         else return false;
     }
     function borrarUsuario($data){
-        $query= $this->db->delete('usuarios', array('id_user'=>$data));
+        $query= $this->db->delete('usuarios', array('id_user'=>$data['id_user']));
+    }
+    function actualizarUsuario($data){
+        $this->db->set('usuario', $data['usuario']);
+        $this->db->set('password', $data['password']);
+        $this->db->set('tipo', $data['tipo']);
+        $this->db->where('id_user', $data['id_user']);
+        $this->db->update('usuarios');
     }
 }
 

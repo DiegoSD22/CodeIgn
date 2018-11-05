@@ -32,11 +32,28 @@ class Consulta extends CI_Controller {
         $this->load->view('invirtual/headers');
         $this->load->view('sesion/formularioborrar');
     }
-            function borrar(){
+    
+    function borrar(){
         $data=array(
             'id_user'=> $this->input->post('id_user')
         );
         $this->baseDatos->borrarUsuario($data);
+        $this->load->view('invirtual/headers');
+        $this->load->view('invirtual/bienvenido');
+    }
+    
+    function nuevoact(){
+        $this->load->view('invirtual/headers');
+        $this->load->view('sesion/formularioact');
+    }
+    function actualizar(){
+        $data=array(
+            'id_user' => $this->input->post('id_user'),
+            'usuario' => $this->input->post('usuario'),
+            'password' => $this->input->post('password'),
+            'tipo' => $this->input->post('tipo')
+        );
+        $this->baseDatos->actualizarUsuario($data);
         $this->load->view('invirtual/headers');
         $this->load->view('invirtual/bienvenido');
     }
