@@ -25,9 +25,10 @@ class BaseDatos extends CI_Model{
         $this->db->update('usuarios');
     }
     
-    function verificar($usuario, $password){
+    function verificar($usuario, $password, $tipo){
         $this->db->where('usuario', $usuario);
         $this->db->where('password', $password);
+        $this->db->where('tipo', $tipo);
         $query= $this->db->get('usuarios');
         
         if($query->num_rows()==1){

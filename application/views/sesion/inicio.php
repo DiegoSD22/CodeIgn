@@ -10,6 +10,10 @@ $password=array(
     'placeholder' => 'Escribe la contraseña',
     'type' => 'password'
 );
+$tipo=array(
+    'name'=>'tipo',
+    
+)
 ?>
     
         <?= form_label('Usuario: ','usuario')?>
@@ -19,6 +23,12 @@ $password=array(
         <?= form_label('Password: ','password')?>
         <?= form_input($password)?>
     </br> </br>
+    
+    <select name="tipo">
+        <option value=""> Seleccione un usuario </option>
+        <option value="A"> Administrador</option>
+        <option value="U"> Usuario </option>
+    </select> </br> </br>
     
     
 <?= form_submit('','Iniciar sesion')?>
