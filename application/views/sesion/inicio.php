@@ -1,5 +1,5 @@
 <html>
-<?= form_open('/consulta/sesion')?>
+<?= form_open('/consulta/iniciosesion')?>
 <?php
 $usuario=array(
     'name' => 'usuario',
@@ -18,17 +18,17 @@ $tipo=array(
     
         <?= form_label('Usuario: ','usuario')?>
         <?= form_input($usuario)?>
-    </br> </br>
+    <br/> <br/>
     
         <?= form_label('Password: ','password')?>
         <?= form_input($password)?>
-    </br> </br>
+    <br/> <br/>
     
     <select name="tipo">
         <option value=""> Seleccione un usuario </option>
         <option value="A"> Administrador</option>
         <option value="U"> Usuario </option>
-    </select> </br> </br>
+    </select> <br/> <br/>
     
     
 <?= form_submit('','Iniciar sesion')?>

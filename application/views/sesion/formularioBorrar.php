@@ -10,7 +10,7 @@ $id_user=array(
     
         <?= form_label('Id: ','id_user')?>
         <?= form_input($id_user)?>
-    </br> </br>
+    <br/> <br/>
     
     
 <?= form_submit('','borrar usuario')?>

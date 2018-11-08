@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 
 foreach ($usuarios->result_array() as $usuario){ 
@@ -6,5 +7,6 @@ foreach ($usuarios->result_array() as $usuario){
     echo '<li>'.$usuario['password'].'</li>';
     echo '<li>'.$usuario['tipo'].'</li>';
     echo'</ul>';
-} ?>
+} 
 
+?>

@@ -10,23 +10,22 @@ $password=array(
     'placeholder' => 'Escribe la contraseña',
     'type' => 'password'
 );
-$tipo=array(
-    'name' => 'tipo',
-    'placeholder' => 'Tipo de usuario'
-);
+
 ?>
     
         <?= form_label('Usuario: ','usuario')?>
         <?= form_input($usuario)?>
-    </br> </br>
+    <br/> <br/>
     
         <?= form_label('Password: ','password')?>
         <?= form_input($password)?>
-    </br> </br>
-    
-        <?= form_label('Tipo: ','tipo')?>
-        <?= form_input($tipo)?>
-    </br> </br>
+    <br/> <br/>
+    Tipo de usuario:
+        <select name="tipo">
+        <option value=""> Seleccione un usuario </option>
+        <option value="A"> Administrador</option>
+        <option value="U"> Usuario </option>
+    </select> <br/> <br/>
     
 <?= form_submit('','Subir usuario')?>
 <?= form_close()?>
