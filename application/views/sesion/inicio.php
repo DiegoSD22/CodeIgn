@@ -31,7 +31,7 @@ $tipo=array(
     </select> <br/> <br/>
     
     
-<?= form_submit('','Iniciar sesion')?>
+<?= form_submit('inicio','Iniciar sesion')?>
 <?= form_close()?>
 
 </body>

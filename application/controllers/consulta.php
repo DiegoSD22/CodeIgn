@@ -61,14 +61,12 @@ class Consulta extends CI_Controller {
     }
     
     function iniciosesion(){
-        $this->load->view('invirtual/headers');
-        
+        $this->load->view('invirtual/headers');        
         $this->form_validation->set_rules('usuario', 'usuario', 'required');
-        $this->form_validation->set_rules('password', 'password', 'required');
+        $this->form_validation->set_rules('password', 'password', 'required', array('required' => 'You must provide a %s.'));
         $this->form_validation->set_rules('tipo', 'tipo', 'required');
-        $this->form_validation->set_message('required', 'El %s es requerido');
-        
-        if ($this->form_validation->run() === FALSE) {
+        $this->form_validation->set_message('required', 'El %s es requerido');        
+        if ($this->form_validation->run() == FALSE) {
             $this->load->view('sesion/inicio');
         } else {
             $usuario = $this->input->post('usuario');
