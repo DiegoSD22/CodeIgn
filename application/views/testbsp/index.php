@@ -15,7 +15,7 @@
     contraseña: 
     <input type="password" placeholder="Escribe la contraseña" id="password" class="btn-warning">
     <br/><br/>
-    <button class="btn-danger">Boton</button>
+    <button type=submit class="btn btn-danger">Boton</button>
     </center></div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>
