@@ -67,7 +67,7 @@ class Consulta extends CI_Controller {
         $this->form_validation->set_rules('tipo', 'tipo', 'required');
         $this->form_validation->set_message('required', 'El %s es requerido');        
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('sesion/inicio');
+            $this->load->view('sesion/inicio.html');
         } else {
             $usuario = $this->input->post('usuario');
             $password = $this->input->post('password');

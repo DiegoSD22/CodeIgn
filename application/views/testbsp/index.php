@@ -8,6 +8,28 @@
         
 </head>
 <body>
+    <?php
+$usuario=array(
+    'name' => 'usuario',
+    'placeholder' => 'Escribe tu usuario'
+);
+$password=array(
+    'name' => 'password',
+    'placeholder' => 'Escribe la contraseña',
+    'type' => 'password'
+);
+$tipo=array(
+    'name'=>'tipo',
+    
+)
+?>
+    
+     <?= form_label('Usuario: ','usuario')?>
+        <?= form_input($usuario)?>
+    <br/> <br/>
+    
+        <?= form_label('Password: ','password')?>
+        <?= form_input($password)?>
     <div class="container"><center>
     Usuario: 
     <input type="text" placeholder="Escribe el usuario" id="usuario" class="btn-warning">
