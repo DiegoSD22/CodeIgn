@@ -4,6 +4,7 @@
         <title>Inicio de sesion</title>
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  crossorigin="anonymous">
     </head>
     <body>
 
@@ -18,6 +19,7 @@
             <circle cx="70" cy="30" r="5" fill="#000000"/>
             <path d="M 30 70 q 20 20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none"/>
             </svg>
+            
             <?= form_open('/consulta/iniciosesion') ?>
             <form>
                 <input name="usuario" placeholder="Usuario" type="text" required/><br/>
