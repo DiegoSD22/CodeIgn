@@ -25,7 +25,7 @@
             <form>
                 <input name="usuario" placeholder="Usuario" type="text" required/><br/>
                 <input name="password" placeholder="Contraseña" type="password" required/><br/>
-                <select name="tipo">
+                <select name="tipo" required>
                     <option value=""> Seleccione un usuario </option>
                     <option value="A"> Administrador</option>
                     <option value="U"> Usuario </option>

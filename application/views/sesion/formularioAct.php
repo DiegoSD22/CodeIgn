@@ -1,4 +1,11 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <title>Formulario</title>
+        <link rel = "stylesheet" type = "text/css" 
+   href = "<?php echo base_url(); ?>css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
+    </head>
 <?= form_open('/consulta/actualizar')?>
 <?php
 $id_user=array(
@@ -17,21 +24,24 @@ $password=array(
 
 
 ?>
-    <p>Id del registro a cambiar:</p><br/>
-        <?= form_label('Id: ','id_user')?>
+    <body>
+    <center>
+        <div class="section">
+            <p><h2>Id del registro a cambiar:</h2>
+       
         <?= form_input($id_user)?>
     <br/> <br/><br/>
     
-    <p>Escriba los nuevos datos del usuario: </p><br/>
-    <?= form_label('Usuario: ','usuario')?>
+    <p><h2>Escriba los nuevos datos del usuario: </h2><br/>
+    
         <?= form_input($usuario)?>
     <br/> <br/>
     
-        <?= form_label('Password: ','password')?>
+        
         <?= form_input($password)?>
     <br/> <br/>
     
-    Tipo de usuario:
+    <h3>Tipo de usuario:</h3>
         <select name="tipo">
         <option value=""> Seleccione un usuario </option>
         <option value="A"> Administrador</option>
@@ -39,7 +49,8 @@ $password=array(
     </select> <br/> <br/>
     
     
-<?= form_submit('','Actualizar usuario')?>
+<input type="submit" value="Cambiar" class="crearUsuario"/>
+</div></center>
 <?= form_close()?>
 
 </body>

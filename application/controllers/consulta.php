@@ -28,8 +28,8 @@ class Consulta extends CI_Controller {
             'tipo' => $this->input->post('tipo')
         );
         $this->baseDatos->crearUsuario($data);
-        $this->load->view('invirtual/headers');
-        $this->load->view('invirtual/bienvenido');
+        
+        
     }
     function nuevoborrar(){
         $this->load->view('invirtual/headers');
@@ -41,8 +41,7 @@ class Consulta extends CI_Controller {
             'id_user'=> $this->input->post('id_user')
         );
         $this->baseDatos->borrarUsuario($data);
-        $this->load->view('invirtual/headers');
-        $this->load->view('invirtual/bienvenido');
+        
     }
     
     function nuevoact(){
@@ -57,8 +56,7 @@ class Consulta extends CI_Controller {
             'tipo' => $this->input->post('tipo')
         );
         $this->baseDatos->actualizarUsuario($data);
-        $this->load->view('invirtual/headers');
-        $this->load->view('invirtual/bienvenido');
+        
     }
     
     function iniciosesion(){
