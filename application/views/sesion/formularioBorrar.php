@@ -17,7 +17,7 @@
     <center>
         <div class="section">
             <p><h2>Id del registro a borrar:</h2>
-            <?= form_input($id_user) ?>
+            <input name="id_user" placeholder="Id del usuario" type="text" required/>
             <br/> <br/>
 
 

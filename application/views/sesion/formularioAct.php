@@ -26,20 +26,20 @@
         <div class="section">
             <p><h2>Id del registro a cambiar:</h2>
 
-            <?= form_input($id_user) ?>
+            <input name="id_user" placeholder="Id del usuario" type="text" required/>
             <br/> <br/><br/>
 
             <p><h2>Escriba los nuevos datos del usuario: </h2><br/>
 
-            <?= form_input($usuario) ?>
+            <input name="usuario" placeholder="Usuario" type="text" required/>
             <br/> <br/>
 
 
-            <?= form_input($password) ?>
+            <input name="password" placeholder="Contraseña" type="password" required/>
             <br/> <br/>
 
             <h3>Tipo de usuario:</h3>
-            <select name="tipo">
+            <select name="tipo" required>
                 <option value=""> Seleccione un usuario </option>
                 <option value="A"> Administrador</option>
                 <option value="U"> Usuario </option>
