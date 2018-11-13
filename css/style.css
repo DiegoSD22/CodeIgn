@@ -53,8 +53,9 @@ h1 span{
   margin-bottom: 10px;
   border-radius: 10px;
   width: 600px;
-  
-  
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
 
 
