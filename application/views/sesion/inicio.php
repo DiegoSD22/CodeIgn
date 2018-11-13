@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Inicio de sesion</title>
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel = "stylesheet" type = "text/css" 
+   href = "<?php echo base_url(); ?>css/style.css">
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  crossorigin="anonymous">
+        
     </head>
     <body>
 

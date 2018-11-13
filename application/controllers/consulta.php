@@ -8,6 +8,7 @@ class Consulta extends CI_Controller {
         $this->load->model('baseDatos');
         $this->load->library(array('session','form_validation'));
         $this->load->helper(array('url','form'));
+        $this->load->helper('url');
         
     }
     function index(){
@@ -67,21 +68,22 @@ class Consulta extends CI_Controller {
         $this->form_validation->set_rules('tipo', 'tipo', 'required');
         $this->form_validation->set_message('required', 'El %s es requerido');        
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('sesion/inicio.html');
+            $this->load->view('sesion/inicio');
         } else {
             $usuario = $this->input->post('usuario');
             $password = $this->input->post('password');
             $tipo= $this->input->post('tipo');
             //comprobamos si existen en la base de datos enviando los datos al modelo
             $login = $this->baseDatos->verificar($usuario, $password, $tipo);
+            $data['usuario']=$usuario;
             if ($login && $tipo=='A')
             {
                 $this->load->view('invirtual/headers');
-                $this->load->view('invirtual/bienvenido');
+                $this->load->view('invirtual/bienvenido', $data);
             }
             else if($login && $tipo=='U'){
                 $this->load->view('invirtual/headers');
-                $this->load->view('invirtual/bienvenidousuario');
+                $this->load->view('invirtual/bienvenidousuario', $data);
             }
         }
     }
