@@ -65,16 +65,15 @@ class Consulta extends CI_Controller {
         $this->load->view('invirtual/headers');
         $this->form_validation->set_rules('usuario', 'usuario', 'required');
         $this->form_validation->set_rules('password', 'password', 'required', array('required' => 'You must provide a %s.'));
-        $this->form_validation->set_rules('tipo', 'tipo', 'required');
         $this->form_validation->set_message('required', 'El %s es requerido');
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('sesion/inicio');
         } else {
             $usuario = $this->input->post('usuario');
             $password = $this->input->post('password');
-            $tipo = $this->input->post('tipo');
             //comprobamos si existen en la base de datos enviando los datos al modelo
-            $login = $this->baseDatos->verificar($usuario, $password, $tipo);
+            $login = $this->baseDatos->verificar($usuario, $password);
+            $tipo= $this->baseDatos->obtenerTipo($usuario);
             $data['usuario'] = $usuario;
             if ($login && $tipo == 'A') {
                 $this->load->view('invirtual/headers');

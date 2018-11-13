@@ -14,7 +14,17 @@ class BaseDatos extends CI_Model{
         if($query->num_rows()>0)return $query;
         else return false;
     }
-    function borrarUsuario($data){
+    function obtenerTipo($usuario){
+        $tipo=$this->db->select('tipo')
+                ->where('usuario', $usuario)
+                ->limit(1)
+                ->get('usuarios')
+                ->row()
+                ->tipo;
+        return $tipo;
+        
+    }
+            function borrarUsuario($data){
         $query= $this->db->delete('usuarios', array('id_user'=>$data['id_user']));
     }
     function actualizarUsuario($data){
@@ -25,10 +35,9 @@ class BaseDatos extends CI_Model{
         $this->db->update('usuarios');
     }
     
-    function verificar($usuario, $password, $tipo){
+    function verificar($usuario, $password){
         $this->db->where('usuario', $usuario);
         $this->db->where('password', $password);
-        $this->db->where('tipo', $tipo);
         $query= $this->db->get('usuarios');
         
         if($query->num_rows()==1){
