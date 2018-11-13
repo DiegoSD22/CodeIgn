@@ -23,14 +23,14 @@
     <center>
         <div class="section">    
             <h3><?= form_label('Usuario: ', 'usuario') ?></h3>
-            <?= form_input($usuario) ?>
+            <input name="usuario" placeholder="Usuario" type="text" required/>
             <br/>
 
             <h3><?= form_label('Password: ', 'password') ?></h3>
-            <?= form_input($password) ?>
+            <input name="password" placeholder="Contraseña" type="password" required/>
             <br/>
             <h3>Tipo de usuario:</h3>
-            <select name="tipo">
+            <select name="tipo" required>
                 <option value=""> Seleccione un usuario </option>
                 <option value="A"> Administrador</option>
                 <option value="U"> Usuario </option>
