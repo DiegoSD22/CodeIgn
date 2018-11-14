@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Formulario</title>
-        <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/style.css">
+        <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/estilos.css">
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
     </head>
     <?= form_open('/consulta/actualizar') ?>

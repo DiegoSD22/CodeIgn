@@ -3,15 +3,15 @@
     <head>
         <title>Inicio de sesion</title>
         <link rel = "stylesheet" type = "text/css" 
-   href = "<?php echo base_url(); ?>css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
+   href = "<?php echo base_url(); ?>css/estilos.css">
+       
         
     </head>
     <body>
 
     <center>
         <div class="section">
-            <h1><span>Inicio sesion</span></h1>
+            <h1><span>Inicio sesion</span></h1><br/>
             <svg class="face" height="100" width="100">
             <circle cx="50" cy="50" r="50" fill="#FDD835"/>
             <circle cx="30" cy="30" r="10" fill="#FFFFFF"/>
