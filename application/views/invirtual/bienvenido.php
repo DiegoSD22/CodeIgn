@@ -4,13 +4,13 @@
         <title>Administrador</title>
         <meta charset="UTF-8">
         <link rel = "stylesheet" type = "text/css" 
-   href = "<?php echo base_url(); ?>css/estilos.css">
+   href = "<?php echo base_url(); ?>css/otro.css">
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
     </head>
-    <body>
+    <body class="white">
         <h1>Bienvenido administrador: <?=$usuario?></h1>
         
-        <div class="section">
+        <div class="section"><center>
       <h1><span>Opciones de usuario:</span></h1>
       <table>
         <tr>
@@ -20,8 +20,8 @@
           
         </tr>
         <tr>
-            <td><input type="submit" value="Crear usuario" class="submit" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta/nuevo'"/></td>
-          <td><input type="submit" value="Borrar usuario" class="submit" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta/nuevoborrar'"/></td>
+            <td><input type="submit" value="Crear usuario" class="azul" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta/nuevo'"/></td>
+          <td><input type="submit" value="Borrar usuario" class="azul" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta/nuevoborrar'"/></td>
           
         </tr>
         <tr>
@@ -30,11 +30,11 @@
           
         </tr>
         <tr>
-          <td><input type="submit" value="Modificar usuario" class="submit" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta/nuevoact'"/></td>
-          <td><input type="submit" value="Ver usuarios" class="submit" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta'"/></td>
+          <td><input type="submit" value="Modificar usuario" class="azul" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta/nuevoact'"/></td>
+          <td><input type="submit" value="Ver usuarios" class="azul" onclick="window.location='http://localhost/CodeIgniter/index.php/consulta'"/></td>
           
         </tr>
       </table>
-    </div>
+            </center></div>
     </body>
 </html>
