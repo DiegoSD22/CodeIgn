@@ -38,7 +38,7 @@ table, th, td{
 
 h1{
   font-size: 17pt;
-  color: #ffffff;
+  color: #000;
   text-align: center;
   padding: 18px 0 18px 0;
   margin: 0 0 10px 0;
@@ -107,6 +107,57 @@ form{
   background-color: #555;
 }
 
+.azul{
+  background-color: #129FEA;
+  padding: 12px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #efefef;
+  border: none;
+  outline: none;
+  margin: 0;
+  font-weight: bold;
+  width: 300px;  
+}
+
+.azul:hover{
+  background-color: #000080;
+}
+
+.blanco{
+  background-color: #ffffff;
+  padding: 12px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  border: none;
+  outline: none;
+  margin: 0;
+  font-weight: bold;
+  width: 300px;  
+}
+
+.blanco:hover{
+  background-color: #efefef;
+}
+
+.verde{
+  background-color: #27AE60;
+  padding: 12px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  border: none;
+  outline: none;
+  margin: 0;
+  font-weight: bold;
+  width: 300px;  
+}
+
+.verde:hover{
+  background-color: #0d7936;
+}
+
 .administradores{
   background-color: #0d7936;
   padding: 12px 45px;
@@ -168,4 +219,3 @@ input, select{
   padding-bottom: 10px;
   color: grey;
 }
-
