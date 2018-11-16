@@ -7,15 +7,15 @@ class Formulario_model extends CI_Model {
 
     function __construct() {
         parent:: __construct();
+        $this->load->database();
     }
 
-    function registre($email)
-{
-    $data = array(
-                'email'=>$this->input->post('email')
-            );
+    function registre($email) {
+        $data = array(
+            'email' => $this->input->post('email')
+        );
 
-    $this->db->insert('emails',$data);
-} 
+        $this->db->insert('emails', $data);
+    }
 
 }

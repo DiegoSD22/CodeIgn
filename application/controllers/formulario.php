@@ -17,29 +17,21 @@ class Formulario extends CI_Controller {
         $this->load->view('sesion/formulario_view');
     }
 
-    public function registre()
-{
+    public function registre() {
 
-    $email = $this->input->post('email');
+        $email = $this->input->post('email');
 
-    $this->form_validation->set_rules('email','EMAIL','trim|required|valid_email|is_unique[utilisateurs.email]');
+        $this->form_validation->set_rules('email', 'EMAIL', 'trim|required|valid_email|is_unique[emails.email]');
 
-    if($this->form_validation->run() == FALSE)
-    {
-        echo validation_errors();
-    }
-    else
-    {               
-        if(!$this->formulario_model->registre($email))
-        {
-            echo "Algo salió mal";
-        }               
-        else
-        {
-            echo "Enviado con exito";
+        if ($this->form_validation->run() == FALSE) {
+            echo validation_errors();
+        } else {
+            if (!$this->formulario_model->registre($email)) {
+                echo "Enviado con exito";
+            } else {
+                echo "Algo salió mal";
+            }
         }
-
     }
-}
 
 }

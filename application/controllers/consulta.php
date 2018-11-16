@@ -31,6 +31,8 @@ class Consulta extends CI_Controller {
             'password' => $this->input->post('password'),
             'tipo' => $this->input->post('tipo')
         );
+        $this->form_validation->set_rules('usuario', 'usuario', 'trim|required|xss_clean|is_unique[usuarios.usuario');
+        
         $this->baseDatos->crearUsuario($data);
     }
 
