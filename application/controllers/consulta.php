@@ -27,7 +27,7 @@ class Consulta extends CI_Controller {
     function recibirDatos() {
 
         $data = array(
-            'usuario'=> $this->input->post('usuario'),
+            'usuario' => $this->input->post('usuario'),
             'password' => $this->input->post('password'),
             'tipo' => $this->input->post('tipo')
         );
@@ -41,8 +41,6 @@ class Consulta extends CI_Controller {
                 echo "Algo salió mal";
             }
         }
-        
-        
     }
 
     function nuevoborrar() {
@@ -93,7 +91,7 @@ class Consulta extends CI_Controller {
             $password = $this->input->post('password');
             //comprobamos si existen en la base de datos enviando los datos al modelo
             $login = $this->baseDatos->verificar($usuario, $password);
-            $tipo= $this->baseDatos->obtenerTipo($usuario);
+            $tipo = $this->baseDatos->obtenerTipo($usuario);
             $data['usuario'] = $usuario;
             if ($login && $tipo == 'A') {
                 $this->load->view('invirtual/headers');
