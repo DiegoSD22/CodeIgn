@@ -43,7 +43,7 @@
                     }
                     error: function() 
                     {
-                        alert("Invalide!");
+                        alert("Invalido!");
                     }
                 }
             );
