@@ -24,7 +24,7 @@ class Formulario extends CI_Controller {
         $this->form_validation->set_rules('email', 'EMAIL', 'trim|required|valid_email|is_unique[emails.email]');
 
         if ($this->form_validation->run() == FALSE) {
-            echo validation_errors();
+            echo "Este email ya existe";
         } else {
             if (!$this->formulario_model->registre($email)) {
                 echo "Enviado con exito";

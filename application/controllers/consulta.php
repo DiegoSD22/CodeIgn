@@ -27,13 +27,22 @@ class Consulta extends CI_Controller {
     function recibirDatos() {
 
         $data = array(
-            'usuario' => $this->input->post('usuario'),
+            'usuario'=> $this->input->post('usuario'),
             'password' => $this->input->post('password'),
             'tipo' => $this->input->post('tipo')
         );
-        $this->form_validation->set_rules('usuario', 'usuario', 'required|trim|xss_clean|is_unique[usuarios.usuario');
+        $this->form_validation->set_rules('usuario', 'USUARIO', 'required|trim|is_unique[usuarios.usuario]');
+        if ($this->form_validation->run() == FALSE) {
+            echo "Este usuario ya existe";
+        } else {
+            if (!$this->baseDatos->crearUsuario($data)) {
+                echo "Enviado con exito";
+            } else {
+                echo "Algo salió mal";
+            }
+        }
         
-        $this->baseDatos->crearUsuario($data);
+        
     }
 
     function nuevoborrar() {
@@ -60,7 +69,16 @@ class Consulta extends CI_Controller {
             'password' => $this->input->post('password'),
             'tipo' => $this->input->post('tipo')
         );
-        $this->baseDatos->actualizarUsuario($data);
+        $this->form_validation->set_rules('usuario', 'USUARIO', 'trim|required|is_unique[usuarios.usuario]');
+        if ($this->form_validation->run() == FALSE) {
+            echo "Este usuario ya existe";
+        } else {
+            if (!$this->baseDatos->actualizarUsuario($data)) {
+                echo "Enviado con exito";
+            } else {
+                echo "Algo salió mal";
+            }
+        }
     }
 
     function iniciosesion() {
