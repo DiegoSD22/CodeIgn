@@ -40,7 +40,7 @@
                         console.log(response);
                         $("#message").html(response);
                         $('#cartmessage').show();
-                    }
+                    },
                     error: function() 
                     {
                         alert("Invalido!");
