@@ -15,13 +15,38 @@ class Usuarios extends CI_Controller {
         $this->load->view('layout/footer');
     }
     
-    function mostrarUsuarios(){
+    public function mostrarUsuarios(){
         $result= $this->m->mostrarUsuarios();
         echo json_encode($result);
     }
     
-    function agregarUsuario(){
+    public function agregarUsuario(){
         $result= $this->m->agregarUsuario();
+        $msg['success']=false;
+        $msg['type']='add';
+        if($result){
+            $msg['success']=true;
+        }
+        echo json_encode($msg);
+    }
+    
+    public function editarUsuario(){
+        $result= $this->m->editarUsuario();
+        echo json_encode($result);
+    }
+    
+    public function actualizarUsuario(){
+        $result= $this->m->actualizarUsuario();
+        $msg['success']=false;
+        $msg['type']='act';
+        if($result){
+            $msg['success']=true;
+        }
+        echo json_encode($msg);
+    }
+    
+    public function borrarUsuario(){
+        $result= $this->m->borrarUsuario();
         $msg['success']=false;
         if($result){
             $msg['success']=true;

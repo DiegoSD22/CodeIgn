@@ -10,7 +10,7 @@ class Usuario_m extends CI_Model {
         $this->load->database();
     }
     
-    function mostrarUsuarios(){
+    public function mostrarUsuarios(){
         $query= $this->db->get('usuarios');
         if($query->num_rows()>0){
             return $query->result();
@@ -19,13 +19,51 @@ class Usuario_m extends CI_Model {
         }
     }
     
-    function agregarUsuario(){
+    public function agregarUsuario(){
         $field=array(
           'usuario'=> $this->input->post('txtUsuario'),
             'password'=> $this->input->post('txtPassword'),
             'tipo'=> $this->input->post('txtTipo')
         );
         $this->db->insert('usuarios', $field);
+        if($this->db->affected_rows()>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public function editarUsuario(){
+        $id_user= $this->input->get('id_user');
+        $this->db->where('id_user', $id_user);
+        $query=$this->db->get('usuarios');
+        if($query->num_rows()>0){
+            return $query->row();
+        }else{
+            return false;
+        }
+    }
+    
+    public function actualizarUsuario(){
+        $id_user= $this->input->post('txtId');
+        $field=array(
+          'usuario'=> $this->input->post('txtUsuario'),
+            'password'=> $this->input->post('txtPassword'),
+            'tipo'=> $this->input->post('txtTipo')
+        );
+        $this->db->where('id_user', $id_user);
+        $this->db->update('usuarios', $field);
+        if($this->db->affected_rows()>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public function borrarUsuario(){
+        $id_user= $this->input->get('id_user');
+        $this->db->where('id_user', $id_user);
+        $this->db->delete('usuarios');
         if($this->db->affected_rows()>0){
             return true;
         }else{
