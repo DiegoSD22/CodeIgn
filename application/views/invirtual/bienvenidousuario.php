@@ -4,7 +4,7 @@
         <title>Usuario</title>
         <meta charset="UTF-8">
         <link rel = "stylesheet" type = "text/css" 
-   href = "<?php echo base_url(); ?>css/otro.css">
+   href = "<?php echo base_url(); ?>sources/css/otro.css">
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">

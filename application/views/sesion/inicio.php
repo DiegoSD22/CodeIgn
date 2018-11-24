@@ -3,7 +3,7 @@
     <head>
         <title>Inicio de sesion</title>
         <link rel = "stylesheet" type = "text/css" 
-   href = "<?php echo base_url(); ?>css/estilos.css">
+   href = "<?php echo base_url(); ?>sources/css/estilos.css">
        
         
     </head>

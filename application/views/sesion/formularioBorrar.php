@@ -3,7 +3,7 @@
     <head>
         <title>Formulario</title>
         <link rel = "stylesheet" type = "text/css" 
-              href = "<?php echo base_url(); ?>css/estilos.css">
+              href = "<?php echo base_url(); ?>sources/css/estilos.css">
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
     </head>
     <?= form_open('/consulta/borrar') ?>

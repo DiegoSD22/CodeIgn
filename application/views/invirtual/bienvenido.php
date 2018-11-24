@@ -4,7 +4,7 @@
         <title>Administrador</title>
         <meta charset="UTF-8">
         <link rel = "stylesheet" type = "text/css" 
-   href = "<?php echo base_url(); ?>css/otro.css">
+   href = "<?php echo base_url(); ?>sources/css/otro.css">
         <link href="https://fonts.googleapis.com/css?family=handlee" rel="stylesheet">
     </head>
     <body class="white">

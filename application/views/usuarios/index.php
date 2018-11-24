@@ -91,7 +91,7 @@
         $('#btnAdd').click(function () {
             $('#myModal').modal('show');
             $('#myModal').find('.modal-title').text('Agregar nuevo usuario');
-            $('#myForm').attr('action', '<?php echo base_url("usuarios/agregarUsuario")?>');
+            $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/agregarUsuario")?>');
         });
 
         $('#btnSave').click(function () {
@@ -155,11 +155,11 @@
             var id=$(this).attr('data');
             $('#myModal').modal('show');
             $('#myModal').find('.modal-title').text('Editar usuario');
-            $('#myForm').attr('action', '<?php echo base_url("usuarios/actualizarUsuario")?>');
+            $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/actualizarUsuario")?>');
             $.ajax({
                type: 'ajax',
                method: 'get',
-               url: '<?php echo base_url("usuarios/editarUsuario")?>',
+               url: '<?php echo base_url("/index.php/usuarios/editarUsuario")?>',
                data: {id_user:id_user},
                async: false,
                dataType: 'json',
@@ -183,7 +183,7 @@
                type: 'ajax',
                method: 'get',
                async: false,
-               url: '<?php echo base_url("usuarios/borrarUsuarios") ?>',
+               url: '<?php echo base_url("/index.php/usuarios/borrarUsuarios") ?>',
                data: {id_user:id_user},
                dataType: 'json',
                success: function (response) {
@@ -207,7 +207,7 @@
         function mostrarUsuarios() {
             $.ajax({
                 type: 'ajax',
-                url: '<?php echo base_url("usuarios/mostrarUsuarios") ?>',
+                url: '<?php echo base_url("/index.php/usuarios/mostrarUsuarios") ?>',
                 
                 dataType: 'json',
                 
