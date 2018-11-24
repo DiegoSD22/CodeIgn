@@ -152,7 +152,7 @@
         
         //Para editar usuarios
         $('#mostrardatos').on('click', '.item-edit', function() {
-            var id=$(this).attr('data');
+            var id_user=$(this).attr('data');
             $('#myModal').modal('show');
             $('#myModal').find('.modal-title').text('Editar usuario');
             $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/actualizarUsuario")?>');
@@ -166,6 +166,7 @@
                success: function (data) {
                         $('input[name=txtUsuario]').val(data.usuario);
                         $('input[name=txtPassword]').val(data.password);
+                        $('select[name=txtTipo]').val(data.tipo);
                         $('input[name=txtId]').val(data.id_user);
                     },
                error: function () {
@@ -176,14 +177,14 @@
 
         //Para borrar usuarios
         $('#mostrardatos').on('click', '.item-delete', function() {
-        var id=$(this).attr('data');
+        var id_user=$(this).attr('data');
         $('#deleteModal').modal('show');
         $('#btnDelete').unbind().click(function() {
             $.ajax({
                type: 'ajax',
                method: 'get',
                async: false,
-               url: '<?php echo base_url("/index.php/usuarios/borrarUsuarios") ?>',
+               url: '<?php echo base_url("/index.php/usuarios/borrarUsuario") ?>',
                data: {id_user:id_user},
                dataType: 'json',
                success: function (response) {
