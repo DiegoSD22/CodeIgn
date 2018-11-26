@@ -1,6 +1,10 @@
 <div class="container">
     <h3>Lista de usuarios</h3>
     <div class="alert alert-success" style="display: none;">
+    
+        
+    </div>
+    <div class="alert alert-danger" style="display: none;">
         
     </div>
     <button id="btnAdd" class="btn btn-success">Agregar nuevo</button>
@@ -19,6 +23,7 @@
         </tbody>
     </table>
 </div>
+
 
 <div id="myModal" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -49,8 +54,8 @@
                         <div class="col-md-8">
                             <select name="txtTipo" class="form-control" required>
                                 <option value=""> Seleccione un usuario </option>
-                                <option value="A"> Administrador</option>
-                                <option value="U"> Usuario </option>
+                                <option value="Administrador"> Administrador</option>
+                                <option value="Usuario"> Usuario </option>
                             </select>
                         </div>
                     </div>
@@ -74,7 +79,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Seguro que quieres borrar el usuario
+                ¿Seguro que quieres borrar el usuario?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -91,7 +96,8 @@
         $('#btnAdd').click(function () {
             $('#myModal').modal('show');
             $('#myModal').find('.modal-title').text('Agregar nuevo usuario');
-            $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/agregarUsuario")?>');
+            $('#myForm')[0].reset();
+            $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/agregarUsuario")?>');                        
         });
 
         $('#btnSave').click(function () {
@@ -132,9 +138,9 @@
                         if (response.success) {
                             $('#myModal').modal('hide');
                             $('#myForm')[0].reset();
-                            if(response.type=='add'){
+                            if(response.type==='add'){
                                 var type="agregado";
-                            }else if(response.type=='act'){
+                            }else if(response.type==='act'){
                                 var type="actualizado";
                             }
                             $('.alert-success').html('Usuario '+type+' con exito').fadeIn().delay(4000).fadeOut('slow');
@@ -189,8 +195,8 @@
                dataType: 'json',
                success: function (response) {
                         if(response.success){
-                            $('#delteModal').modal('hide');
-                            $('.alert-success').html('Usuario borrado con exito').fadeIn().delay(4000).fadeOut('slow');
+                            $('#deleteModal').modal('hide');
+                            $('.alert-danger').html('El usuario fue eliminado').fadeIn().delay(4000).fadeOut('slow');
                             mostrarUsuarios();
                         }else{
                             alert('Error');
@@ -224,6 +230,7 @@
                                 '<td>' + data[i].tipo + '</td>' +
                                 '<td>' +
                                 '<a href="javascript:;" class="btn btn-info item-edit" data="' + data[i].id_user + '">Edit</a>' +
+                                '   '+
                                 '<a href="javascript:;" class="btn btn-danger item-delete" data="' + data[i].id_user + '">Delete</a>' +
                                 '</td>' +
                                 '</tr>';

@@ -12,7 +12,7 @@
     <body>
         <div class="navbar navbar-default">
             <div class="container">
-                <h2><span class="fa fa-android"></span>&nbsp;Usuarios</h2>
+                <h2><span></span>&nbsp;Usuarios</h2>
             </div>
         </div>
         <div class="container">

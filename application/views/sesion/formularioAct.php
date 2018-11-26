@@ -41,8 +41,8 @@
             <h3>Tipo de usuario:</h3>
             <select name="tipo" required>
                 <option value=""> Seleccione un usuario </option>
-                <option value="A"> Administrador</option>
-                <option value="U"> Usuario </option>
+                <option value="Administrador"> Administrador</option>
+                <option value="Usuario"> Usuario </option>
             </select> <br/> <br/>
 
 

@@ -93,11 +93,11 @@ class Consulta extends CI_Controller {
             $login = $this->baseDatos->verificar($usuario, $password);
             $tipo = $this->baseDatos->obtenerTipo($usuario);
             $data['usuario'] = $usuario;
-            if ($login && $tipo == 'A') {                
+            if ($login && $tipo == 'Administrador') {                
                 $this->load->view('layout/header');
                 $this->load->view('usuarios/index');
                 $this->load->view('layout/footer');
-            } else if ($login && $tipo == 'U') {
+            } else if ($login && $tipo == 'Usuario') {
                 $this->load->view('invirtual/headers');
                 $this->load->view('invirtual/bienvenidousuario', $data);
             }
