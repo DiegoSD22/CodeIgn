@@ -7,6 +7,7 @@ class Usuarios extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('usuario_m','m');
+        $this->load->library('session');
     }
     
     function index(){
@@ -16,8 +17,14 @@ class Usuarios extends CI_Controller {
     }
     
     public function mostrarUsuarios(){
-        $result= $this->m->mostrarUsuarios();
-        echo json_encode($result);
+        if( !is_null($this->session->userdata('id')) ){
+            $result= $this->m->mostrarUsuarios();
+            echo json_encode($result);
+            //var_dump($this->session);
+            
+        }else{
+            redirect('consulta/iniciosesion');
+        }
     }
     
     public function agregarUsuario(){

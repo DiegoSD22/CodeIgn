@@ -97,9 +97,17 @@ class Consulta extends CI_Controller {
                 $this->load->view('layout/header');
                 $this->load->view('usuarios/index');
                 $this->load->view('layout/footer');
+                $userData['id']='1';
+                $userData['userRol'] = 'Admin';
+                $userData['userName'] = $usuario;
+                $this->session->set_userdata($userData);
             } else if ($login && $tipo == 'Usuario') {
                 $this->load->view('invirtual/headers');
                 $this->load->view('invirtual/bienvenidousuario', $data);
+                $userData['id']='4';
+                $userData['userRol'] = 'User';
+                $userData['userName'] = $usuario;
+                $this->session->set_userdata($userData);
             }
         }
     }
