@@ -2,6 +2,11 @@ html{
   margin: 0;
   padding: 0;
 }
+
+#cerrarS{
+text-align: right;    
+}
+
 body{
   font-family: 'Handlee', cursive;
   font-size: 13pt;

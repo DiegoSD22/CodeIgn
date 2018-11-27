@@ -111,6 +111,11 @@ class Consulta extends CI_Controller {
             }
         }
     }
+    
+    function cerrarSesion(){
+        $this->session->sess_destroy();
+        $this->iniciosesion();
+    }
 
 }
 

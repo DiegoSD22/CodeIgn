@@ -57,6 +57,8 @@ class BaseDatos extends CI_Model {
             $this->load->view('invirtual/error');
         }
     }
+    
+    
 
 }
 

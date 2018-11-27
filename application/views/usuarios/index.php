@@ -8,6 +8,7 @@
         
     </div>
     <button id="btnAdd" class="btn btn-success">Agregar nuevo</button>
+    <button id="cerrarS" class="btn btn-danger"><a href="<?php echo base_url('index.php/consulta/cerrarSesion')?>" class="Nopoint">Cerrar Sesion</a></button>
     <table class="table table-bordered table-responsive" style="margin-top: 20px">
         <thead>
             <tr>
