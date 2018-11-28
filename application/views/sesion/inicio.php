@@ -22,7 +22,7 @@
             </svg><br/>
             
             <?= form_open('/consulta/iniciosesion') ?>
-            <form>
+            <form name="myform">
                 <input name="usuario" placeholder="Usuario" type="text" required/><br/><br/>
                 <input name="password" placeholder="Contraseña" type="password" required/><br/><br/>
                 <!--<select name="tipo" required>

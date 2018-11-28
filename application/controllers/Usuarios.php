@@ -21,11 +21,28 @@ class Usuarios extends CI_Controller {
             $result= $this->m->mostrarUsuarios();
             echo json_encode($result);
             //var_dump($this->session);
-            
+            //echo $_SERVER['HTTP_REFERER']; //compare(str,iniciosession) (if exist, fi contains)
         }else{
             redirect('consulta/iniciosesion');
         }
     }
+    
+    public function enviacorreo(){
+        
+            $to = 'diegosd2297@gmail.com';//tareasmendoza@yahoo.com
+            $subject= 'Email de prueba';
+            $mensaje='Este es mi primer envio de email con PHP';
+            if(mail ($to, $subject, $mensaje)){
+                echo 'Parece que envio el mail';
+            }else{
+                echo 'Fallò el envio de correo';
+            }
+            
+            //1 Acabar validacion form con $_server
+            //2 Envio de email con gmail
+            //3 Crear store procedure mysql, lo mandas a llamar en codeigniter
+    }
+    
     
     public function agregarUsuario(){
         $result= $this->m->agregarUsuario();
