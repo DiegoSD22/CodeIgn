@@ -71,4 +71,14 @@ class Usuario_m extends CI_Model {
         }
     }
     
+    function insert_user($usuario, $password, $tipo) {
+        $insert_user_stored_proc = "CALL insertuser(?, ?, ?, ?)";
+        $data = array('usuario' => $usuario, 'password' => $password, 'tipo' => $tipo);
+        $result = $this->db->query($insert_user_stored_proc, $data);
+        if ($result !== NULL) {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    
 }
