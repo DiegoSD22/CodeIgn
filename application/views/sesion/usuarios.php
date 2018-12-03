@@ -9,12 +9,12 @@
     <body>
 <?php
 
-foreach ($usuarios->result_array() as $usuario){ 
+foreach ($result->result_array() as $resultado){ 
     echo'<ul>';
     echo'<h6>';
-    echo '<li>'.$usuario['usuario'].'</li>';
-    echo '<li>'.$usuario['password'].'</li>';
-    echo '<li>'.$usuario['tipo'].'</li>';
+    echo '<li>'.$resultado['usuario'].'</li>';
+    echo '<li>'.$resultado['password'].'</li>';
+    echo '<li>'.$resultado['tipo'].'</li>';
     echo '</h6>';
     echo'</ul>';
 } 

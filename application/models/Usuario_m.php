@@ -81,4 +81,14 @@ class Usuario_m extends CI_Model {
         return FALSE;
     }
     
+    
+    /*CREATE PROCEDURE Selector() BEGIN SELECT * FROM usuarios; END*/
+    
+     
+    public function seleccionar(){
+    $data = $this->db->query("CALL Selector()");
+       mysqli_next_result($this->db->conn_id);
+       $result = $data->result();
+    
+    }
 }

@@ -93,14 +93,9 @@ class Usuarios extends CI_Controller {
         echo json_encode($msg);
     }
     
-    /*public function eliminar()
-    {
-        if($this->db->query("CALL Eliminar(2)"))
-        {
-            echo 'listo';
-        }else{
-            show_error('Error!');
-        }
-    }*/
+    public function seleccionar(){
+        $result=$this->m->seleccionar();
+        $this->load->view('sesion/usuarios',$result);
+    }
 
 }
