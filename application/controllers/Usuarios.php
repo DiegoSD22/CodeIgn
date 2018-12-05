@@ -13,9 +13,13 @@ class Usuarios extends CI_Controller {
     }
 
     function index() {
+        if (!is_null($this->session->userdata('id'))) {
         $this->load->view('layout/header');
         $this->load->view('usuarios/index');
         $this->load->view('layout/footer');
+        }else {
+            redirect('consulta/iniciosesion');
+        }
     }
 
     public function mostrarUsuarios() {
