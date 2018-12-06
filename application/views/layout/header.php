@@ -14,7 +14,7 @@
         <header>
         <div class="navbar navbar-default">
             <div class="container">
-                <h2><span class="glyphicon glyphicon-home"></span>&nbsp;Usuarios</h2>
+                <h2><span class="glyphicon glyphicon-user"></span>&nbsp;Usuarios</h2>
             </div>
         </div>
         </header>
