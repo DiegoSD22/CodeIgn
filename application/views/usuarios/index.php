@@ -8,7 +8,7 @@
         
     </div>
     <button id="btnAdd" class="btn btn-success">Agregar nuevo</button>
-    <a href="<?php echo base_url('index.php/consulta/cerrarSesion')?>" class="btn btn-warning">Cerrar Sesion</a>
+    <button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
         <thead>
@@ -65,7 +65,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <button type="button" id="btnSave" class="btn btn-primary">Guardar</button>
             </div>
         </div>
@@ -85,8 +85,28 @@
                 ¿Seguro que quieres borrar el usuario?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <button type="button" id="btnDelete" class="btn btn-danger">Borrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cerrarModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmar borrar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ¿Seguro que quieres cerrar la sesion?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnSalir" class="btn btn-danger">Salir</button>
             </div>
         </div>
     </div>
@@ -95,6 +115,19 @@
 <script>
     $(function () {
         mostrarUsuarios();
+        
+        //Cerrar sesion
+        $('#btnCerrar').click(function () {
+           $('#cerrarModal').modal('show');
+           $('#cerrarModal').find('.modal-title').text('Cerrar sesion');
+           $('#myForm').attr('action', '<?php echo base_url("/index.php/consulta/cerrarSesion")?>');
+        });
+        
+        $('#btnSalir').click(function () {
+          $('#myForm').attr('action', '<?php echo base_url("/index.php/consulta/cerrarSesion")?>');
+           
+        });
+        
         //Agregar usuario
         $('#btnAdd').click(function () {
             $('#myModal').modal('show');
