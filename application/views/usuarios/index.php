@@ -8,7 +8,8 @@
         
     </div>
     <button id="btnAdd" class="btn btn-success">Agregar nuevo</button>
-    <button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>
+    <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
+    <!--<button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>-->
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
         <thead>
@@ -120,11 +121,24 @@
         $('#btnCerrar').click(function () {
            $('#cerrarModal').modal('show');
            $('#cerrarModal').find('.modal-title').text('Cerrar sesion');
-           $('#myForm').attr('action', '<?php echo base_url("/index.php/consulta/cerrarSesion")?>');
+         
         });
         
         $('#btnSalir').click(function () {
-          $('#myForm').attr('action', '<?php echo base_url("/index.php/consulta/cerrarSesion")?>');
+          $.ajax({
+               type: 'ajax',
+               method: 'get',
+               url: '<?php echo base_url("/index.php/consulta/cerrarSesion")?>',
+               data: data,
+               async: false,
+               dataType: 'json',
+               success: function (data) {
+                        alert('Sesion cerrada')
+                    },
+               error: function () {
+                        alert('No se puede cerrar la sesion');
+                    }
+            });
            
         });
         
@@ -146,18 +160,21 @@
             var result = '';
             if (usuario.val() === '') {
                 usuario.parent().parent().addClass('error');
+                alert('Debe ingresar un nombre de usuario');
             } else {
                 usuario.parent().parent().removeClass('error');
                 result += '1';
             }
             if (password.val() === '') {
                 password.parent().parent().addClass('error');
+                alert('Debe de ingresar una contraseña');
             } else {
                 password.parent().parent().removeClass('error');
                 result += '2';
             }
             if (tipo.val() === '') {
                 tipo.parent().parent().addClass('error');
+                alert('Debe escoger un tipo de usuario');
             } else {
                 tipo.parent().parent().removeClass('error');
                 result += '3';
@@ -175,7 +192,7 @@
                             $('#myModal').modal('hide');
                             $('#myForm')[0].reset();
                             if(response.type==='add'){
-                                var type="agregado";
+                                var type="creado";
                             }else if(response.type==='act'){
                                 var type="actualizado";
                             }

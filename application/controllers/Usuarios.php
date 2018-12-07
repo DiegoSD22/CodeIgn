@@ -100,6 +100,10 @@ class Usuarios extends CI_Controller {
     public function seleccionar(){
         $result=$this->m->seleccionar();
         $this->load->view('sesion/usuarios',$result);
+        if($result){
+            $msg['success']=true;
+        }
+        echo json_encode($msg);
     }
 
 }
