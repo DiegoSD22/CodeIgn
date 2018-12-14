@@ -1,5 +1,12 @@
 <div class="container">
-    <h3>Lista de usuarios</h3>
+    <div class="messages">
+        <div class="message -left">
+          
+          <div class="balloon from-left">
+            <p>Lista de usuarios</p>
+          </div>
+        </div>
+        <div class="message -right">
     <div class="alert alert-success" style="display: none;">
     
         
@@ -11,7 +18,7 @@
     <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
     
     <!--<button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>-->
-    <div class="table-responsive-sm">
+    <div class="table is-bordered is-centered">
     <table class="table table-striped table-bordered table-hover table-sm" style="margin-top: 20px">
         <thead class="thead-dark">
             <tr class="info">

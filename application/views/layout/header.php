@@ -15,7 +15,7 @@
         <header>
         <div class="navbar navbar-dark bg-primary">
             <div class="container">
-                <h2><span class="glyphicon glyphicon-user"></span>&nbsp;Usuarios</h2>
+                <h2><i class="bcrikko"></i>&nbsp;Usuarios</h2>
                 
             </div>
         </div>
