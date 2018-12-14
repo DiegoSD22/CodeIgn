@@ -9,10 +9,11 @@
     </div>
     <button id="btnAdd" class="btn btn-success">Agregar nuevo</button>
     <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
+    
     <!--<button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>-->
-    <div class="table-responsive">
-    <table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
-        <thead>
+    <div class="table-responsive-sm">
+    <table class="table table-striped table-bordered table-hover table-sm" style="margin-top: 20px">
+        <thead class="thead-dark">
             <tr class="info">
                 <td>ID_user</td>
                 <td>Usuario</td>
@@ -282,9 +283,11 @@
                                 '<td>' + data[i].password + '</td>' +
                                 '<td>' + data[i].tipo + '</td>' +
                                 '<td>' +
-                                '<a href="javascript:;" class="btn btn-info item-edit" data="' + data[i].id_user + '">Edit</a>' +
+                                '<div class="btn-group" role="group" aria-label="Basic example">'+
+                                '<a href="javascript:;" class="btn btn-info btn-sm item-edit" data="' + data[i].id_user + '">Edit</a>' +
                                 '   '+
-                                '<a href="javascript:;" class="btn btn-danger item-delete" data="' + data[i].id_user + '">Delete</a>' +
+                                '<a href="javascript:;" class="btn btn-danger btn-sm item-delete" data="' + data[i].id_user + '">Delete</a>' +
+                                '</div>'+
                                 '</td>' +
                                 '</tr>';
                     }
