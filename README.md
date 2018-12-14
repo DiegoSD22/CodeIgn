@@ -1,4 +1,4 @@
-# CodeIgn
+# CodeIgniter
 Uso del Framework CodeIgniter, para fácil uso de la arquitectura MVC.
 
 1.-Instalación xampp
