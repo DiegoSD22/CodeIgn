@@ -1,9 +1,9 @@
 # CodeIgniter
 Uso del Framework CodeIgniter, para fácil uso de la arquitectura MVC.
 
-1.-Instalación xampp
+1.-Instalación [ xampp](https://www.apachefriends.org/es/index.html)
 
-2.-Descargar CodeIgniter
+2.-Descargar [ CodeIgniter](https://codeigniter.com/) (Mismo link esta el manual del Framework)
 
 3.-Descomprimir la carpeta y colocarla en la carpeta de htdocs de xampp
 
