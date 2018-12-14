@@ -105,5 +105,9 @@ class Usuarios extends CI_Controller {
         }
         echo json_encode($msg);
     }
+    
+    public function ness(){
+        $this->load->view('usuarios/ness');
+    }
 
 }
