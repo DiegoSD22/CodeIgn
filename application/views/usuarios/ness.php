@@ -3,6 +3,8 @@
 <html lang="ja">
   <head>
       <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/nes.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/loader.min.css')?>">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -44,24 +46,30 @@
     <section class="container with-title">
       <h2 class="title">Buttons</h2>
       <div>
-        <button type="button" class="btn">Normal</button>
-        <button type="button" class="btn is-primary">Primary</button>
-        <button type="button" class="btn is-success">Success</button>
-        <button type="button" class="btn is-warning">Warning</button>
-        <button type="button" class="btn is-error">Error</button>
+        <button type="button" class="btn shake-slow">Normal</button>
+        <button type="button" class="btn is-primary shake-opacity">Primary</button>
+        <button type="button" class="btn is-success shake-rotate shake-freeze">Success</button>
+        <button type="button" class="btn is-warning shake-slow shake-constant shake-constant--hover">Warning</button>
+        <button type="button" class="btn is-error shake-chunk">Error</button>
       </div>
     </section>
 
-    <section class="container with-title">
+    <section class="container with-title shake-opacity">
       <h2 class="title">Containers</h2>
       <div class="containers">
         <div class="container with-title is-center">
           <p class="title">Container.is-center</p>
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+          <i class="preview-item shake-slow">
+						Ss
+						<span class="flip"></span>
+					</i>
+					<p class="preview-desc">Slow Shake</p>
         </div>
         <div class="container is-dark with-title">
           <p class="title">Container.is-dark</p>
           <p style="color: white;">Good morning. Thou hast had a good night's sleep, I hope.</p>
+          
         </div>
         <div class="container is-rounded">
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
@@ -76,7 +84,7 @@
       <h2 class="title">Radios</h2>
       <div>
         <label>
-          <input type="radio" class="radio" name="answer" checked />
+            <input type="radio" class="radio" name="answer" checked />
           <span>Yes</span>
         </label>
         <label>
