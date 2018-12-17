@@ -3,6 +3,7 @@
     <head>
         <title>Admin</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/font-awesome.min.css')?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/bootstrap.css')?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/bootstrap.min.css')?>"> 
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/bootstrap-theme.min.css')?>">
