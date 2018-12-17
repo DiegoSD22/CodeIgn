@@ -14,12 +14,12 @@
     <div class="alert alert-danger" style="display: none;">
         
     </div>
-    <button id="btnAdd" class="btn btn-success">Agregar nuevo</button>
+    <button id="btnAdd" class="btn btn-success shake-slow">Agregar nuevo</button>
     <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
     
     <!--<button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>-->
     <div class="table is-bordered is-centered">
-    <table class="table table-striped table-bordered table-hover table-sm" style="margin-top: 20px">
+    <table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
         <thead class="thead-dark">
             <tr class="info">
                 <td>ID_user</td>
