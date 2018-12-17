@@ -52,19 +52,23 @@
                     <div class="form-group">
                         <label for="usuario" class="label-control col-md-4">Nombre usuario:</label>
                         <div class="col-md-8">
-                            <input type="text" name="txtUsuario" class="form-control">
+                            <input type="text" name="txtUsuario" class="input" size="30"
+    onclick="comprueba(this)"
+    onfocus="comprueba(this)"
+    onblur="comprueba(this)"
+    onchange="comprueba(this)" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="password" class="label-control col-md-4">Password:</label>
                         <div class="col-md-8">
-                            <input type="password" name="txtPassword" class="form-control">
+                            <input type="password" name="txtPassword" id="txtPss" class="input" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="tipo" class="label-control col-md-4">Tipo:</label>
                         <div class="col-md-8">
-                            <select name="txtTipo" class="form-control" required>
+                            <select name="txtTipo" class="input" required>
                                 <option value=""> Seleccione un usuario </option>
                                 <option value="Administrador"> Administrador</option>
                                 <option value="Usuario"> Usuario </option>
@@ -124,7 +128,9 @@
 <script>
     $(function () {
         mostrarUsuarios();
-        
+        var clicksu=0;
+            var clicksp=0;
+            var clickst=0;
         //Cerrar sesion
         $('#btnCerrar').click(function () {
            $('#cerrarModal').modal('show');
@@ -166,25 +172,38 @@
             var password = $('input[name=txtPassword]');
             var tipo = $('select[name=txtTipo]');
             var result = '';
+            
             if (usuario.val() === '') {
-                usuario.parent().parent().addClass('error');
-                alert('Debe ingresar un nombre de usuario');
+                usuario.addClass('input is-error');
+                if(clicksu==0){
+                usuario.after("<p style='color:red' id='usuReq'>El campo usuario es obligatorio</p>");
+                }
+                clicksu++;
             } else {
-                usuario.parent().parent().removeClass('error');
+                usuario.removeClass('is-error');
+                $('#usuReq').remove();
                 result += '1';
             }
-            if (password.val() === '') {
-                password.parent().parent().addClass('error');
-                alert('Debe de ingresar una contraseña');
+            if (password.val().length<=7) {
+                password.addClass('input is-error');
+                if(clicksp==0){
+                password.after("<p style='color:red' id='passReq'>Los caracteres minimos son 8</p>");
+                }
+                clicksp++;
             } else {
-                password.parent().parent().removeClass('error');
+                password.removeClass('is-error');
+                $('#passReq').remove();
                 result += '2';
             }
-            if (tipo.val() === '') {
-                tipo.parent().parent().addClass('error');
-                alert('Debe escoger un tipo de usuario');
+            if (tipo.val() === '' || clickst==0) {
+                tipo.addClass('input is-error');
+                if(clickst==0){
+                tipo.after("<p style='color:red' id='tipoReq'>Debe seleccionar un tipo de usuario</p>");
+                }
+                clickst++;
             } else {
-                tipo.parent().parent().removeClass('error');
+                tipo.removeClass('is-error');
+                $('#tipoReq').remove();
                 result += '3';
             }
             if (result === '123') {
@@ -307,3 +326,31 @@
         }
     });
 </script>
+<script>
+function comprueba(obj) {
+    if (obj.value=='') {
+        if ((document.all)||(document.getElementById)) {
+            obj.style.backgroundColor = '#ddd';
+            
+        }
+    } else {
+        if ((document.all)||(document.getElementById)) {
+            obj.style.backgroundColor = '#FFFFFF';
+        }
+    }
+}
+</script>
+<!--<script>
+    var usuario = $('input[name=txtUsuario]');
+    usuario.after("<p style='color:red'>the max length of 50 characters is reached, you typed in xx characters</p>");
+    </script>-->
+<!--<script>
+	function valida(){
+		if(document.getElementById("txtPss").value.length <= 7){
+			alert('ingrese una contraseña de minimo 8 caracteres');
+			return false;
+		}else{
+				document.form1.submit();
+		}
+	}
+</script>-->
