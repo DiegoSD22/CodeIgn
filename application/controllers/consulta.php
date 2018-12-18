@@ -103,7 +103,7 @@ class Consulta extends CI_Controller {
                 $this->session->set_userdata($userData);
             } else if ($login && $tipo == 'Usuario') {
                 $this->load->view('invirtual/headers');
-                $this->load->view('invirtual/bienvenidousuario', $data);
+                $this->load->view('usuarios/usuario', $data);
                 $userData['id']='4';
                 $userData['userRol'] = 'User';
                 $userData['userName'] = $usuario;
