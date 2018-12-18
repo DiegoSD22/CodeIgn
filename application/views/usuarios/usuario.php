@@ -29,10 +29,10 @@
               <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Un link</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link disabled" href="#">Uno deshabilitado</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -53,32 +53,32 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide" src="<?php echo base_url('sources/fonts/faro.jpg')?>" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <h1>Primer slide</h1>
+                <p>Texto si es que va haber</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Boton</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="<?php echo base_url('sources/fonts/huella.png')?>" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                <h1>Segundo slide</h1>
+                <p>Más texto</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Otro</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="<?php echo base_url('sources/fonts/planeta.png')?>" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1>Tercer slide</h1>
+                <p>Más texto</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Otro mas</a></p>
               </div>
             </div>
           </div>
@@ -103,22 +103,22 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <img class="rounded-circle" src="<?php echo base_url('sources/fonts/faro.jpg')?>" alt="Generic placeholder image" width="140" height="140">
+            <h2>Titulo imagen</h2>
+            <p>Texto de eso</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Boton imagen &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <img class="rounded-circle" src="<?php echo base_url('sources/fonts/huella.png')?>" alt="Generic placeholder image" width="140" height="140">
+            <h2>La segunda</h2>
+            <p>Otra vez texto de esa imagen de arriba</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <img class="rounded-circle" src="<?php echo base_url('sources/fonts/planeta.png')?>" alt="Generic placeholder image" width="140" height="140">
+            <h2>La tercera</h2>
+            <p>Otra vez, lo mismo pero en la tercera</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Si quieres &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -129,11 +129,11 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Encabezado del faro <span class="text-muted">Texto más claro sobre el faro</span></h2>
+            <p class="lead">Texto que habla sobre el faro, lo que quieran poner</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+              <img src="<?php echo base_url('sources/fonts/faro.jpg')?>">
           </div>
         </div>
 
@@ -141,11 +141,11 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">¡Oh otra imagen! <span class="text-muted">Una huella digital</span></h2>
+            <p class="lead">Una huella digital con lenguaje en ceros y unos :O</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <img src="<?php echo base_url('sources/fonts/huella.png')?>">
           </div>
         </div>
 
@@ -153,11 +153,11 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Y la última <span class="text-muted">El planeta con personas y animales</span></h2>
+            <p class="lead">Una representación sobre el planeta, parece ser...</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <img src="<?php echo base_url('sources/fonts/planeta.png')?>">
           </div>
         </div>
 
@@ -178,11 +178,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="<?php echo base_url();?>sources/js/jquery-3.1.1.slim.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script type="text/javascript" src="<?php echo base_url();?>sources/js/popper.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>sources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/jquery-3.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="sources/js2/bootstrap.js"><\/script>')</script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/popper.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script type="text/javascript" src="<?php echo base_url();?>sources/js/holder.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/holder.min.js"></script>
   </body>
 </html>
