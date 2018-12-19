@@ -5,12 +5,13 @@
         <link rel = "stylesheet" type = "text/css" 
    href = "<?php echo base_url(); ?>sources/css/estilos.css">
         
-       
+       <link rel="icon" href="<?php echo base_url('sources/fonts/fire-2-32.ico')?>">
         
     </head>
     <body>
 
     <center>
+       
         <div class="section">
             <h1><span>Inicio sesion</span></h1><br/>
             <svg class="face" height="100" width="100">

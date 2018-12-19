@@ -13,7 +13,7 @@ class Usuarios extends CI_Controller {
     }
 
     function index() {
-        if (!is_null($this->session->userdata('id'))) {
+        if ($this->session->userdata('userRol')=="Admin") {
         $this->load->view('layout/header');
         $this->load->view('usuarios/index');
         $this->load->view('layout/footer');

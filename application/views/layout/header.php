@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/nes.css')?>">
         <script type="text/javascript" src="<?php echo base_url();?>sources/js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url()?>sources/js/bootstrap.min.js"></script>
-    
+        <link rel="icon" href="<?php echo base_url('sources/fonts/fire-2-32.ico')?>">
     </head>
     <body>
         <header>
