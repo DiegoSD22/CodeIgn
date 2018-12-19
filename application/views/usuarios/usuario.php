@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/carousel.css')?>">
