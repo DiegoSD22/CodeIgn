@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/carousel.css')?>">
   </head>
@@ -128,7 +128,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <div class="row featurette" style="background-color: #5bc0de">
           <div class="col-md-7">
             <h2 class="featurette-heading">Encabezado del faro <span class="text-muted">Texto más claro sobre el faro</span></h2>
             <p class="lead">Texto que habla sobre el faro, lo que quieran poner</p>
