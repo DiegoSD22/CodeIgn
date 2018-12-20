@@ -128,7 +128,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette" style="background-color: #5bc0de">
+        <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Encabezado del faro <span class="text-muted">Texto más claro sobre el faro</span></h2>
             <p class="lead">Texto que habla sobre el faro, lo que quieran poner</p>

@@ -16,10 +16,14 @@
     </div>
     <button id="btnAdd" class="btn btn-success shake-slow">Agregar nuevo</button>
     <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
-    
+    <div>
+	<form>
+            Buscar dentro de la tabla <input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
+	</form>
+    </div>
     <!--<button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>-->
     <div class="table is-bordered is-centered">
-    <table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
+        <table class="table table-striped table-bordered table-hover" id="datos" style="margin-top: 20px">
         <thead class="thead-dark">
             <tr class="info">
                 <td>ID_user</td>
@@ -326,6 +330,7 @@
         }
     });
 </script>
+
 <script>
 function comprueba(obj) {
     if (obj.value=='') {
@@ -340,6 +345,7 @@ function comprueba(obj) {
     }
 }
 </script>
+
 <!--<script>
     var usuario = $('input[name=txtUsuario]');
     usuario.after("<p style='color:red'>the max length of 50 characters is reached, you typed in xx characters</p>");
@@ -354,3 +360,39 @@ function comprueba(obj) {
 		}
 	}
 </script>-->
+
+<script>
+		function doSearch()
+		{
+			var tableReg = document.getElementById('datos');
+			var searchText = document.getElementById('searchTerm').value.toLowerCase();
+			var cellsOfRow="";
+			var found=false;
+			var compareWith="";
+ 
+			// Recorremos todas las filas con contenido de la tabla
+			for (var i = 1; i < tableReg.rows.length; i++)
+			{
+				cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+				found = false;
+				// Recorremos todas las celdas
+				for (var j = 0; j < cellsOfRow.length && !found; j++)
+				{
+					compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+					// Buscamos el texto en el contenido de la celda
+					if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+					{
+						found = true;
+					}
+				}
+				if(found)
+				{
+					tableReg.rows[i].style.display = '';
+				} else {
+					// si no ha encontrado ninguna coincidencia, esconde la
+					// fila de la tabla
+					tableReg.rows[i].style.display = 'none';
+				}
+			}
+		}
+	</script>
