@@ -16,12 +16,15 @@
     </div>
     <button id="btnAdd" class="btn btn-success shake-slow">Agregar nuevo</button>
     <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
+    
+    <hr class="featurette-divider">
     <div>
 	<form>
             Buscar dentro de la tabla <input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
 	</form>
     </div>
-    <!--<button class="btn btn-warning" id="btnCerrar">Cerrar Sesion</button>-->
+    
+    
     <div class="table is-bordered is-centered">
         <table class="table table-striped table-bordered table-hover" id="datos" style="margin-top: 20px">
         <thead class="thead-dark">
@@ -82,7 +85,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnClose" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <button type="button" id="btnSave" class="btn btn-primary">Guardar</button>
             </div>
         </div>
@@ -176,13 +179,17 @@
             var password = $('input[name=txtPassword]');
             var tipo = $('select[name=txtTipo]');
             var result = '';
+            var clicksu=0;
+            var clicksp=0;
+            var clickst=0;
             
             if (usuario.val() === '') {
                 usuario.addClass('input is-error');
                 if(clicksu==0){
                 usuario.after("<p style='color:red' id='usuReq'>El campo usuario es obligatorio</p>");
-                }
                 clicksu++;
+                }
+                
             } else {
                 usuario.removeClass('is-error');
                 $('#usuReq').remove();
@@ -192,8 +199,9 @@
                 password.addClass('input is-error');
                 if(clicksp==0){
                 password.after("<p style='color:red' id='passReq'>Los caracteres minimos son 8</p>");
-                }
                 clicksp++;
+                }
+                
             } else {
                 password.removeClass('is-error');
                 $('#passReq').remove();
@@ -203,8 +211,9 @@
                 tipo.addClass('input is-error');
                 if(clickst==0){
                 tipo.after("<p style='color:red' id='tipoReq'>Debe seleccionar un tipo de usuario</p>");
-                }
                 clickst++;
+                }
+                
             } else {
                 tipo.removeClass('is-error');
                 $('#tipoReq').remove();
@@ -238,6 +247,35 @@
                     }
                 });
             }
+        });
+        
+        $('#btnClose').click(function () {
+        
+            //Validar form
+            var usuario = $('input[name=txtUsuario]');
+            var password = $('input[name=txtPassword]');
+            var tipo = $('select[name=txtTipo]');
+            var result = '';
+            
+            
+           
+                usuario.removeClass('is-error');
+                $('#usuReq').remove();
+                result += '1';
+            
+            
+                
+            
+                password.removeClass('is-error');
+                $('#passReq').remove();
+                result += '2';
+            
+            
+              
+                tipo.removeClass('is-error');
+                $('#tipoReq').remove();
+                result += '3';
+            
         });
         
         //Para editar usuarios
@@ -350,6 +388,7 @@ function comprueba(obj) {
     var usuario = $('input[name=txtUsuario]');
     usuario.after("<p style='color:red'>the max length of 50 characters is reached, you typed in xx characters</p>");
     </script>-->
+
 <!--<script>
 	function valida(){
 		if(document.getElementById("txtPss").value.length <= 7){

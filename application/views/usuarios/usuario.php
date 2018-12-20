@@ -128,7 +128,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <div class="row featurette" style="background-color: #9fcdff">
           <div class="col-md-7">
             <h2 class="featurette-heading">Encabezado del faro <span class="text-muted">Texto más claro sobre el faro</span></h2>
             <p class="lead">Texto que habla sobre el faro, lo que quieran poner</p>
@@ -140,19 +140,19 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
+        <div class="row featurette" style="background-color: palegreen">
+          <div class="col-md-6 order-md-2">
             <h2 class="featurette-heading">¡Oh otra imagen! <span class="text-muted">Una huella digital</span></h2>
-            <p class="lead">Una huella digital con lenguaje en ceros y unos :O</p>
+            <p class="lead">Una huella digital</p>
           </div>
-          <div class="col-md-5 order-md-1">
-            <img src="<?php echo base_url('sources/fonts/huella.png')?>">
+          <div class="col-md-6 order-md-1">
+            <img src="<?php echo base_url('sources/fonts/triangulo.jpg')?>">
           </div>
         </div>
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <div class="row featurette" style="background-color: wheat">
           <div class="col-md-7">
             <h2 class="featurette-heading">Y la última <span class="text-muted">El planeta con personas y animales</span></h2>
             <p class="lead">Una representación sobre el planeta, parece ser...</p>
