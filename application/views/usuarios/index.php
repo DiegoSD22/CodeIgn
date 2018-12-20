@@ -16,7 +16,7 @@
             </div>
             <button id="btnAdd" class="btn btn-success shake-slow">Agregar nuevo</button>
             <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
-
+            <!--<button id="btnCerrar" class="btn btn-warning">Cerrar sesion</button>-->
             <hr class="featurette-divider">
             <div>
                 <form>
@@ -50,7 +50,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true" id="tache">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -136,8 +136,9 @@
             $(function () {
                 mostrarUsuarios();
                 var clicksu = 0;
-                    var clicksp = 0;
-                    var clickst = 0;
+                var clicksp = 0;
+                var clickst = 0;
+                
                 //Cerrar sesion
                 $('#btnCerrar').click(function () {
                     $('#cerrarModal').modal('show');
@@ -154,7 +155,7 @@
                         async: false,
                         dataType: 'json',
                         success: function (data) {
-                            alert('Sesion cerrada')
+                            alert('Sesion cerrada');
                         },
                         error: function () {
                             alert('No se puede cerrar la sesion');
@@ -179,15 +180,15 @@
                     var password = $('input[name=txtPassword]');
                     var tipo = $('select[name=txtTipo]');
                     var result = '';
-                    
+
 
                     if (usuario.val() === '') {
                         usuario.addClass('input is-error');
                         if (clicksu == 0) {
                             usuario.after("<p style='color:red' id='usuReq'>El campo usuario es obligatorio</p>");
-                            clicksu=1;
+                            clicksu = 1;
                         }
-                    
+
                     } else {
                         usuario.removeClass('is-error');
                         $('#usuReq').remove();
@@ -199,7 +200,7 @@
                             password.after("<p style='color:red' id='passReq'>Los caracteres minimos son 8</p>");
                             clicksp++;
                         }
-                    
+
                     } else {
                         password.removeClass('is-error');
                         $('#passReq').remove();
@@ -211,7 +212,7 @@
                             tipo.after("<p style='color:red' id='tipoReq'>Debe seleccionar un tipo de usuario</p>");
                             clickst++;
                         }
-                    
+
                     } else {
                         tipo.removeClass('is-error');
                         $('#tipoReq').remove();
@@ -247,6 +248,7 @@
                     }
                 });
 
+                //Para limpiar el formulario al darle cancelar
                 $('#btnClose').click(function () {
 
                     //Validar form
@@ -258,22 +260,52 @@
 
 
                     usuario.removeClass('is-error');
-                    $('#usuReq').remove();                
-                    clicksu=0;
+                    $('#usuReq').remove();
+                    clicksu = 0;
 
 
 
                     password.removeClass('is-error');
-                    $('#passReq').remove();                  
-                    clicksp=0;
+                    $('#passReq').remove();
+                    clicksp = 0;
 
 
                     tipo.removeClass('is-error');
                     $('#tipoReq').remove();
-                    clickst=0;
-                    
+                    clickst = 0;
+
 
                 });
+
+                //Para limpiar el formulario al darle el tache
+                $('#tache').click(function () {
+
+                    //Validar form
+                    var usuario = $('input[name=txtUsuario]');
+                    var password = $('input[name=txtPassword]');
+                    var tipo = $('select[name=txtTipo]');
+                    var result = '';
+
+
+
+                    usuario.removeClass('is-error');
+                    $('#usuReq').remove();
+                    clicksu = 0;
+
+
+
+                    password.removeClass('is-error');
+                    $('#passReq').remove();
+                    clicksp = 0;
+
+
+                    tipo.removeClass('is-error');
+                    $('#tipoReq').remove();
+                    clickst = 0;
+
+
+                });
+
 
                 //Para editar usuarios
                 $('#mostrardatos').on('click', '.item-edit', function () {
