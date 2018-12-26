@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
-    <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/carousel.css')?>">
   </head>
   <body>
@@ -95,13 +94,9 @@
       </div>
 
 
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
       <div class="container marketing">
 
-        <!-- Three columns of text below the carousel -->
+        
         <div class="row">
           <div class="col-lg-4">
             <img class="rounded-circle" src="<?php echo base_url('sources/fonts/faro.jpg')?>" alt="Generic placeholder image" width="140" height="140">
@@ -128,7 +123,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette" style="background-color: #9fcdff">
+        <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Encabezado del faro <span class="text-muted">Texto más claro sobre el faro</span></h2>
             <p class="lead">Texto que habla sobre el faro, lo que quieran poner</p>
@@ -140,7 +135,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette" style="background-color: palegreen">
+        <div class="row featurette">
           <div class="col-md-6 order-md-2">
             <h2 class="featurette-heading">¡Oh otra imagen! <span class="text-muted">Una huella digital</span></h2>
             <p class="lead">Una huella digital</p>
@@ -152,7 +147,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette" style="background-color: wheat">
+        <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Y la última <span class="text-muted">El planeta con personas y animales</span></h2>
             <p class="lead">Una representación sobre el planeta, parece ser...</p>
@@ -164,7 +159,7 @@
 
         <hr class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
+        
 
       </div><!-- /.container -->
 
@@ -177,14 +172,11 @@
       </footer>
     </main>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+   
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/jquery-3.1.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="sources/js2/bootstrap.js"><\/script>')</script>
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/popper.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/holder.min.js"></script>
   </body>
 </html>

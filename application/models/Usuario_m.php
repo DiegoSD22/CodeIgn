@@ -71,6 +71,8 @@ class Usuario_m extends CI_Model {
         }
     }
     
+    /*CREATE OR REPLACE PROCEDURE insertuser(MY_User IN VARCHAR2, MY_Pass IN VARCHAR2, MY_Tipo IN VARCHAR2) BEGIN INSERT INTO usuarios(usuario, password, tipo) VALUES(MY_User, MY_Pass, MY_Tipo); END*/
+    
     function insert_user($usuario, $password, $tipo) {
         $insert_user_stored_proc = "CALL insertuser(?, ?, ?)";
         $data = array('usuario' => $usuario, 'password' => $password, 'tipo' => $tipo);
@@ -82,7 +84,7 @@ class Usuario_m extends CI_Model {
     }
     
     
-    /*CREATE PROCEDURE Selector() BEGIN SELECT * FROM usuarios; END*/
+    /*CREATE OR REPLACE PROCEDURE Selector() BEGIN SELECT * FROM usuarios; END*/
     
      
     public function seleccionar(){
