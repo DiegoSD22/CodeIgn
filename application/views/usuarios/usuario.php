@@ -168,7 +168,7 @@
       <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Invirtual. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
+        <p>&copy; 2018 Invirtual. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
       </footer>
     </main>
 
