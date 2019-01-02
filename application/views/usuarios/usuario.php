@@ -150,7 +150,7 @@
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Y la última <span class="text-muted">El planeta con personas y animales</span></h2>
-            <p class="lead">Una representación sobre el planeta, parece ser...</p>
+            <p class="lead">Un planeta...</p>
           </div>
           <div class="col-md-5">
             <img src="<?php echo base_url('sources/fonts/planeta.png')?>">
