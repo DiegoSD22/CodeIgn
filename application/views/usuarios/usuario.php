@@ -15,25 +15,27 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/carousel.css')?>">
     
+        
+    
   </head>
   <body>
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Invirtual</a>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-cloud"></span> InvirtualWeb </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="glyphicon glyphicon-home"></span> Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Un link</a>
+                <a class="nav-link" href="#"><span class="glyphicon glyphicon-link"></span> Un link </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Uno deshabilitado</a>
+                <a class="nav-link" href="#"><span class="glyphicon glyphicon-bed"></span> Otro </a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
