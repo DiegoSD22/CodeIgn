@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/carousel.css')?>">
-    <!--<link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/estilos.css')?>">-->
+    
   </head>
   <body>
 
@@ -94,7 +94,7 @@
         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </a> 
       </div>
 
 

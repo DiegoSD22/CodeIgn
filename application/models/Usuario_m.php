@@ -88,9 +88,7 @@ class Usuario_m extends CI_Model {
     
      
     public function seleccionar(){
-    $data = $this->db->query("CALL Selector()");
-       mysqli_next_result($this->db->conn_id);
-       $result = $data->result();
-    
+    $query = $this->db->query("CALL Selector()");
+      return $query->result();
     }
 }

@@ -114,4 +114,9 @@ class Usuarios extends CI_Controller {
         $this->load->view('usuarios/ness');
     }
 
+    
+    public function PruebaSP(){
+        $result=$this->m->seleccionar();
+        echo json_encode($result);
+    }
 }

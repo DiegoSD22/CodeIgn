@@ -191,7 +191,8 @@
                             clicksu = 1;
                         }
 
-                    } else {
+                    } 
+                    else {
                         usuario.removeClass('is-error');
                         $('#usuReq').remove();
                         result += '1';
@@ -367,7 +368,7 @@
                 function mostrarUsuarios() {
                     $.ajax({
                         type: 'ajax',
-                        url: '<?php echo base_url("/index.php/usuarios/mostrarUsuarios") ?>',
+                        url: '<?php echo base_url("/index.php/usuarios/PruebaSP") ?>',
 
                         dataType: 'json',
 
