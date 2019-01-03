@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/carousel.css')?>">
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/estilos.css')?>">-->
   </head>
   <body>
 
@@ -36,8 +37,8 @@
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            <!--<input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">-->
+              <a href="<?php echo base_url() ?>index.php/consulta/inicioSesion" id="btnLogin" class="btn btn-outline-success my-2 my-sm-0">Inicio sesion</a>
           </form>
         </div>
       </nav>
@@ -45,6 +46,9 @@
 
     <main role="main">
 
+        
+        
+        <!--Carousel-->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -178,5 +182,6 @@
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/popper.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>sources/js2/holder.min.js"></script>
+    
   </body>
 </html>
