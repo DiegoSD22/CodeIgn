@@ -20,7 +20,7 @@
             <hr class="featurette-divider">
             <div>
                 <form>
-                    Buscar dentro de la tabla <input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
+                    Buscar dentro de la tabla  <input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
                 </form>
             </div>
 

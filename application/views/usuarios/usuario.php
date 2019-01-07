@@ -35,7 +35,7 @@
                 <a class="nav-link" href="#"><span class="glyphicon glyphicon-link"></span> Un link </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><span class="glyphicon glyphicon-bed"></span> Otro </a>
+                <a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Otro </a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
