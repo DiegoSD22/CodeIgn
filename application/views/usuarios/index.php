@@ -40,11 +40,9 @@
 
                     </tbody>
                 </table>
-            </div>
-            
-            
+            </div>                        
         </div>
-&
+
 
         <div id="myModal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
