@@ -20,7 +20,7 @@
             <hr class="featurette-divider">
             <div>
                 <form>
-                    Buscar dentro de la tabla  <input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
+                    Buscar dentro de la tabla:<input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
                 </form>
             </div>
 
@@ -142,27 +142,30 @@
                 //Cerrar sesion
                 $('#btnCerrar').click(function () {
                     $('#cerrarModal').modal('show');
-                    $('#cerrarModal').find('.modal-title').text('Cerrar sesion');
-
-                });
-
-                $('#btnSalir').click(function () {
-                    $.ajax({
-                        type: 'ajax',
-                        method: 'get',
-                        url: '<?php echo base_url("/index.php/consulta/cerrarSesion") ?>',
-                        data: data,
-                        async: false,
-                        dataType: 'json',
-                        success: function (data) {
-                            alert('Sesion cerrada');
-                        },
-                        error: function () {
-                            alert('No se puede cerrar la sesion');
-                        }
+                    $('#btnSalir').unbind().click(function () {
+                        $.ajax({
+                            type: 'ajax',
+                            method: 'get',
+                            async: false,
+                            url: '<?php echo base_url("/index.php/consulta/cerrarSesion") ?>',
+                            data: {id_user: id_user},
+                            dataType: 'json',
+                            success: function (response) {
+                                if (response.success) {
+                                    $('#cerrarModal').modal('hide');                                                                        
+                                } else {
+                                    alert('Error');
+                                }
+                            },
+                            error: function () {
+                                alert('No se puede cerrar sesion');
+                            }
+                        });
                     });
 
                 });
+
+                
 
                 //Agregar usuario
                 $('#btnAdd').click(function () {
