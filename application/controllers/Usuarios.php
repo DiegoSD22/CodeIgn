@@ -65,6 +65,8 @@ class Usuarios extends CI_Controller {
             ?>*/        
         //2 Envio de email con gmail
         //3 Crear store procedure mysql, lo mandas a llamar en codeigniter
+        //4 Subir un archivo al servidor
+        //5 Como generar un PDF con PHP e integrarlo a codeigniter
     }
 
     public function agregarUsuario() {
