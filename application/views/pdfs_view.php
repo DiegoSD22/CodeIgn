@@ -3,8 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Generación de reportes con codeIgniter</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css') ?>">
-            
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css') ?>">     
                 </head>
                 <body>
                     <div class="container">
