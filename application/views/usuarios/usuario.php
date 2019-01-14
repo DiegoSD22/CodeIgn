@@ -9,7 +9,7 @@
   
     <title>Usuarios</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css/shake.css')?>">
@@ -173,7 +173,7 @@
 
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
+        <p class="float-right"><a href="#">Volver arriba</a></p>
         <p>&copy; 2018 Invirtual. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos</a></p>
       </footer>
     </main>

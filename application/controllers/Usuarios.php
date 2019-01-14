@@ -11,11 +11,13 @@ class Usuarios extends CI_Controller {
         $this->load->library('email');
         $this->load->library('parser');
     }
-
+    
+//Función para cargar pagina inicial
     function index() {
         $this->load->view('usuarios/usuario');
     }
-    
+
+//Función para cargar la vista administrador    
     function admin(){
         if ($this->session->userdata('userRol')=="Admin") {
         $this->load->view('layout/header');
@@ -26,6 +28,8 @@ class Usuarios extends CI_Controller {
         }
     }
 
+    
+//Función para cargar los usuarios guardados en la BD    
     public function mostrarUsuarios() {
         if (!is_null($this->session->userdata('id'))) {
             $result = $this->m->mostrarUsuarios();
@@ -36,12 +40,14 @@ class Usuarios extends CI_Controller {
             redirect('consulta/iniciosesion');
         }
     }
-    
+
+//Función para cargar la vista correo    
     public function correo(){
         $this->load->view('usuarios/contacto_v');
 
     }
 
+//Función para enviar un correo    
     public function enviacorreo() {
 
         $this->load->library('email');
@@ -69,6 +75,7 @@ class Usuarios extends CI_Controller {
         //5 Como generar un PDF con PHP e integrarlo a codeigniter
     }
 
+//Función para agregar un usuario a la BD llamando al modelo    
     public function agregarUsuario() {
         $result = $this->m->agregarUsuario();
         $msg['success'] = false;
@@ -79,11 +86,13 @@ class Usuarios extends CI_Controller {
         echo json_encode($msg);
     }
 
+//Función para mostrar los datos de un usuario en especifico de la BD llamando al modelo    
     public function editarUsuario() {
         $result = $this->m->editarUsuario();
         echo json_encode($result);
     }
 
+//Función para cambiar datos de un usuario llamando al modelo    
     public function actualizarUsuario() {
         $result = $this->m->actualizarUsuario();
         $msg['success'] = false;
@@ -94,6 +103,7 @@ class Usuarios extends CI_Controller {
         echo json_encode($msg);
     }
 
+//Función para borrar un usuario de la BD llamando al modelo    
     public function borrarUsuario() {
         $result = $this->m->borrarUsuario();
         $msg['success'] = false;
@@ -102,7 +112,8 @@ class Usuarios extends CI_Controller {
         }
         echo json_encode($msg);
     }
-    
+
+
     public function seleccionar(){
         $result=$this->m->seleccionar();
         $this->load->view('sesion/usuarios',$result);
@@ -117,6 +128,7 @@ class Usuarios extends CI_Controller {
     }
 
     
+//Función para cargar los usuarios guardados en la BD (con Store Procedure)    
     public function PruebaSP(){
         $result=$this->m->seleccionar();
         echo json_encode($result);

@@ -5,7 +5,8 @@ class Pdfs_m extends CI_Model
 	{
 		parent::__construct();
 	}
-	//obtenemos las provincias para cargar en el select
+        
+//Función para obtener las provincias
 	function getProvincias()
 	{
 		$query = $this->db->get('provincias_es');
@@ -18,7 +19,8 @@ class Pdfs_m extends CI_Model
 				return $data;
 		}
 	}
-    //obtenemos las localidades dependiendo de la provincia escogida
+        
+//Función para obtener las localidades, dependiendo de la provincia seleccionada
     function getProvinciasSeleccionadas($provincia)
 	{
         $query = $this->db->query('SELECT l.provincia,l.localidad,l.id,p.provincia 
@@ -38,6 +40,3 @@ class Pdfs_m extends CI_Model
 	     }
 	}    
 }
-/*pdf_model.php
- * el modelo
- */

@@ -17,6 +17,8 @@ class Pdfs extends CI_Controller {
         $this->load->view('pdfs_view', $data);
     }
 
+    
+//Función para generar el PDF   
     public function generar() {
         $this->load->library('Pdf');
         $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
@@ -65,8 +67,8 @@ class Pdfs extends CI_Controller {
         
         $html = '';
         $html .= "<style type=text/css>";
-        $html .= "th{color: #fff; font-weight: bold; background-color: #222}";
-        $html .= "td{background-color: #AAC7E3; color: #fff}";
+        $html .= "th{color: #fff; font-weight: bold; background-color: #aaa}";
+        $html .= "td{background-color: #000; color: #fff}";
         $html .= "</style>";
         $html .= "<h2>Localidades de " . $prov . "</h2><h4>Actualmente: " . count($provincias) . " localidades</h4>";
         $html .= "<table width='100%'>";
@@ -88,6 +90,8 @@ class Pdfs extends CI_Controller {
         $pdf->Output($nombre_archivo, 'I');
     }
 
+    
+//Función para subir el archivo seleccionado    
     public function upload() {
         $target_path = 'sources/fonts/';
         $target_path = $target_path . basename($_FILES['uploadedfile']['name']);

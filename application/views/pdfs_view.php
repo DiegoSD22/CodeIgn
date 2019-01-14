@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Generación de reportes con codeIgniter</title>
+        <title>Creación de PDF</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css') ?>">     
                 </head>
                 <body>
@@ -15,6 +15,7 @@
                                     <select class="btn btn-outline-info"name="provincia" id="provincia">
                                         <option value="">Selecciona tu provincía</option>
                                         <?php
+                                        //Para buscar en la BD las provincias existentes
                                         foreach ($provincias as $fila) {
                                             ?>
                                             <option value=<?= $fila->id ?>><?= $fila->provincia ?></option>
@@ -35,7 +36,7 @@
                     </div>
 
                     <hr class="featurette-divider">
-
+                        <!--Subir archivos-->
                         <div class="container">
                             <div class="row featurette">
                                 <div class="col-md-7">

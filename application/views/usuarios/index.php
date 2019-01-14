@@ -7,6 +7,7 @@
             </div>
         </div>
         <div class="message -right">
+            <!--Alertas al hacer una acción-->
             <div class="alert alert-success" style="display: none;">
 
 
@@ -14,17 +15,19 @@
             <div class="alert alert-danger" style="display: none;">
 
             </div>
+            <!--Boton para agregar usuario y cerrar sesion-->
             <button id="btnAdd" class="btn btn-success shake-slow">Agregar nuevo</button>
             <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
             <!--<button id="btnCerrar" class="btn btn-warning">Cerrar sesion</button>-->
             <hr class="featurette-divider">
             <div>
+                <!--Input para buscar un dato dentro de la tabla-->
                 <form>
                     Buscar dentro de la tabla:<input class="input" id="searchTerm" type="text" onkeyup="doSearch()" />
                 </form>
             </div>
 
-
+<!--Tabla de usuarios-->
             <div class="table is-bordered is-centered">
                 <table class="table table-striped table-bordered table-hover" id="datos" style="margin-top: 20px">
                     <thead class="thead-dark">
@@ -36,14 +39,15 @@
                             <td>Acciones</td>
                         </tr>
                     </thead>
-                    <tbody id="mostrardatos">
+                    <!--Esto se llama en JS para cargar los datos en la tabla-->                    
+                            <tbody id="mostrardatos">
 
                     </tbody>
                 </table>
             </div>                        
         </div>
 
-
+<!--Modal para agregar usuario y editarlo-->
         <div id="myModal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -92,6 +96,7 @@
             </div>
         </div>
 
+<!--Modal para borra un usuario-->
         <div id="deleteModal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -112,6 +117,7 @@
             </div>
         </div>
 
+<!--Modal para cerrar la sesion-->
         <div id="cerrarModal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -434,6 +440,7 @@
 </script>-->
 
         <script>
+            //Función para hacer la busqueda de datos en una tabla
             function doSearch()
             {
                 var tableReg = document.getElementById('datos');

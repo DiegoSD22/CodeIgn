@@ -14,8 +14,10 @@
     </head>
     <body>
         <header>
+            <!--Barra del header-->
         <div class="navbar navbar-dark bg-primary">
             <div class="container">
+                <!--Cara que sale en la navbar-->
                 <h2><i class="bcrikko"></i>&nbsp;Usuarios</h2>
                 
             </div>
