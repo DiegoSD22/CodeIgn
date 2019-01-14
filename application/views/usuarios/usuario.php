@@ -143,7 +143,7 @@
 
         <div class="row featurette">
           <div class="col-md-6 order-md-2">
-            <h2 class="featurette-heading">¡Oh otra imagen! <span class="text-muted">Una huella digital</span></h2>
+            <h2 class="featurette-heading">¡Oh, otra imagen! <span class="text-muted">Una huella digital</span></h2>
             <p class="lead">Una huella digital</p>
           </div>
           <div class="col-md-6 order-md-1">
