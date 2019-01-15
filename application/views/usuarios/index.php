@@ -17,8 +17,8 @@
             </div>
             <!--Boton para agregar usuario y cerrar sesion-->
             <button id="btnAdd" class="btn btn-success shake-slow">Agregar nuevo</button>
-            <a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>
-            <!--<button id="btnCerrar" class="btn btn-warning">Cerrar sesion</button>-->
+            <!--<a href="<?php echo base_url() ?>index.php/consulta/cerrarSesion" class="btn btn-warning"> Cerrar sesión </a>-->
+            <button id="btnCerrar" class="btn btn-warning">Cerrar sesion</button>
             <hr class="featurette-divider">
             <div>
                 <!--Input para buscar un dato dentro de la tabla-->
@@ -145,23 +145,21 @@
                 var clicksp = 0;
                 var clickst = 0;
                 
+                
                 //Cerrar sesion
                 $('#btnCerrar').click(function () {
+                    var id_user = $(this).attr('data');
                     $('#cerrarModal').modal('show');
                     $('#btnSalir').unbind().click(function () {
                         $.ajax({
-                            type: 'ajax',
-                            method: 'get',
-                            async: false,
+                            type: 'POST',
                             url: '<?php echo base_url("/index.php/consulta/cerrarSesion") ?>',
-                            data: {id_user: id_user},
-                            dataType: 'json',
-                            success: function (response) {
-                                if (response.success) {
-                                    $('#cerrarModal').modal('hide');                                                                        
-                                } else {
-                                    alert('Error');
-                                }
+                            data: {datos:"datos"},
+                            success: function (data) {
+                                if (data) {
+                                    $('#cerrarModal').modal('hide');
+                                    window.location.replace("http://localhost/CodeIgniter/index.php/consulta/iniciosesion")
+                                } 
                             },
                             error: function () {
                                 alert('No se puede cerrar sesion');
@@ -172,7 +170,6 @@
                 });
 
                 
-
                 //Agregar usuario
                 $('#btnAdd').click(function () {
                     $('#myModal').modal('show');
@@ -342,6 +339,7 @@
                     });
                 });
 
+
                 //Para borrar usuarios
                 $('#mostrardatos').on('click', '.item-delete', function () {
                     var id_user = $(this).attr('data');
@@ -370,6 +368,7 @@
                     });
 
                 });
+
 
                 //Funcion para mostrar usuarios
                 function mostrarUsuarios() {
