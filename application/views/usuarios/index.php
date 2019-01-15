@@ -148,7 +148,6 @@
                 
                 //Cerrar sesion
                 $('#btnCerrar').click(function () {
-                    var id_user = $(this).attr('data');
                     $('#cerrarModal').modal('show');
                     $('#btnSalir').unbind().click(function () {
                         $.ajax({
