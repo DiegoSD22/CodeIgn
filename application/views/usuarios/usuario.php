@@ -125,7 +125,7 @@
         </div><!-- /.row -->
 
 
-        <!-- START THE FEATURETTES -->
+        <!-- FEATURETTES -->
 
         <hr class="featurette-divider">
 
@@ -133,10 +133,10 @@
           <div class="col-md-7">
             <h2 class="featurette-heading">Encabezado del faro <span class="text-muted">Texto más claro sobre el faro</span></h2>
             <p class="lead">Texto que habla sobre el faro, lo que quieran poner</p>
-          </div>
+          </div><!-- /.col-md-7 -->
           <div class="col-md-5">
               <img src="<?php echo base_url('sources/fonts/faro.jpg')?>">
-          </div>
+          </div><!-- /.col-md-5 -->
         </div>
 
         <hr class="featurette-divider">
@@ -145,10 +145,10 @@
           <div class="col-md-6 order-md-2">
             <h2 class="featurette-heading">¡Oh, otra imagen! <span class="text-muted">Una huella digital</span></h2>
             <p class="lead">Una huella digital</p>
-          </div>
+          </div><!-- /.col-md-6 order-md-2 -->
           <div class="col-md-6 order-md-1">
             <img src="<?php echo base_url('sources/fonts/triangulo.jpg')?>">
-          </div>
+          </div><!-- /.col-md-6 order-md-1 -->
         </div>
 
         <hr class="featurette-divider">
@@ -157,10 +157,10 @@
           <div class="col-md-7">
             <h2 class="featurette-heading">Y la última <span class="text-muted">El planeta con personas y animales</span></h2>
             <p class="lead">Un planeta...</p>
-          </div>
+          </div><!-- /.col-md-7 -->
           <div class="col-md-5">
             <img src="<?php echo base_url('sources/fonts/planeta.png')?>">
-          </div>
+          </div><!-- /.col-md-5 -->
         </div>
 
         <hr class="featurette-divider">
