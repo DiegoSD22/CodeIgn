@@ -25,7 +25,7 @@ class Pdfs extends CI_Controller {
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Diego Sanchez');
         $pdf->SetTitle('Ejemplo de provincías con TCPDF');
-        $pdf->SetSubject('Tutorial TCPDF');
+        $pdf->SetSubject('Crear PDF con TCPDF');
         $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 //Ponemos lo que va a ir en el header y footer        
