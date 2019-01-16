@@ -17,11 +17,11 @@ class Pdfs extends CI_Controller {
         $this->load->view('pdfs_view', $data);
     }
 
-    
 //Función para generar el PDF   
     public function generar() {
         $this->load->library('Pdf');
         $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
+        $pdf->SetProtection(array('print', 'copy', 'modify'), 'password', 'superpass', 0, null);
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Diego Sanchez');
         $pdf->SetTitle('Ejemplo de provincías con TCPDF');
@@ -64,7 +64,7 @@ class Pdfs extends CI_Controller {
         foreach ($provincias as $fila) {
             $prov = $fila['p.provincia'];
         }
-        
+
         $html = '';
         $html .= "<style type=text/css>";
         $html .= "th{color: #fff; font-weight: bold; background-color: #aaa}";
@@ -83,22 +83,27 @@ class Pdfs extends CI_Controller {
         $html .= "</table>";
 
 //Imprimimos el texto con writeHTMLCell()
-        $pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
+        //$pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
+        
+$pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '', true, 300);
 
 //Terminamos el documento PDF para su descarga
         $nombre_archivo = utf8_decode("Localidades de " . $prov . ".pdf");
         $pdf->Output($nombre_archivo, 'I');
     }
 
-    
 //Función para subir el archivo seleccionado    
     public function upload() {
         $target_path = 'sources/fonts/';
         $target_path = $target_path . basename($_FILES['uploadedfile']['name']);
-        if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
-            echo "El archivo " . basename($_FILES['uploadedfile']['name']) . " ha sido subido";
+        if ($_FILES['uploadedfile']['type'] == "image/jpeg" || $_FILES['uploadedfile']['type'] == "application/pdf") {
+            if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+                echo "El archivo " . basename($_FILES['uploadedfile']['name']) . " ha sido subido";
+            } else {
+                echo "Ha ocurrido un error, trate de nuevo!";
+            }
         } else {
-            echo "Ha ocurrido un error, trate de nuevo!";
+            echo"Tipo de archivo no aceptado";
         }
     }
 

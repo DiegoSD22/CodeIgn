@@ -3,7 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Creación de PDF</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css') ?>">     
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.min.css')?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/bootstrap.css')?>">     
                 </head>
                 <body>
                     <div class="container">
@@ -46,6 +47,48 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <hr class="featurette-divider">
+                        <div class="col-lg-12">
+                        <div class="table is-bordered is-centered">
+                            <table class="table table-striped table-bordered table-hover" style="margin-top: 20px">
+                                <thead class="thead-dark">
+                                    <tr class="info">
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">TCPDF</th>
+                                        <th scope="col">mPDF</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                <td>Support HTML</td>
+                                <td><b><center>&checkmark;</center></b></td>
+                                <td><b><center>&checkmark;</center></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Links</td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Copy paste</td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password</td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Read only</td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                        <td><b><center>&checkmark;</center></b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         </div>
                 </body>
                 </html>
