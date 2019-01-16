@@ -34,6 +34,7 @@
                             </tr>
                         </table>
                         </form>
+                        <a href="<?php echo base_url() ?>index.php/pdfs/generarmpdf" class="btn btn-outline-info">Crear PDF mPDF</a>
                     </div>
 
                     <hr class="featurette-divider">

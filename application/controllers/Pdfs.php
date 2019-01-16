@@ -83,7 +83,7 @@ class Pdfs extends CI_Controller {
         $html .= "</table>";
 
 //Imprimimos el texto con writeHTMLCell()
-        //$pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
+        $pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
         
 $pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '', true, 300);
 
@@ -105,6 +105,24 @@ $pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '
         } else {
             echo"Tipo de archivo no aceptado";
         }
+    }
+    
+    public function generarmpdf(){
+        $data = [];
+        //load the view and saved it into $html variable
+        $html=$this->load->view('welcome_message', $data, true);
+ 
+        //this the the PDF filename that user will get to download
+        $pdfFilePath = "output_pdf_name.pdf";
+ 
+        //load mPDF library
+        $this->load->library('m_pdf');
+ 
+       //generate the PDF from the given html
+        $this->m_pdf->pdf->WriteHTML($html);
+ 
+        //download it.
+        $this->m_pdf->pdf->Output($pdfFilePath, "D");  
     }
 
 }
