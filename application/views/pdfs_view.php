@@ -63,7 +63,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                <td>Support HTML</td>
+                                <td>Support HTML & CSS</td>
                                 <td><b><center>&checkmark;</center></b></td>
                                 <td><b><center>&checkmark;</center></b></td>
                                     </tr>
@@ -75,7 +75,7 @@
                                     <tr>
                                         <td>Copy paste</td>
                                         <td><b><center>&checkmark;</center></b></td>
-                                        <td><b><center>&checkmark;</center></b></td>
+                                        <td><b><center>&chi;</center></b></td>
                                     </tr>
                                     <tr>
                                         <td>Password</td>
@@ -85,7 +85,7 @@
                                     <tr>
                                         <td>Read only</td>
                                         <td><b><center>&checkmark;</center></b></td>
-                                        <td><b><center>&checkmark;</center></b></td>
+                                        <td><b><center>&chi;</center></b></td>
                                     </tr>
                                 </tbody>
                             </table>

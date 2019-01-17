@@ -67,8 +67,10 @@ class Pdfs extends CI_Controller {
 
         $html = '';
         $html .= "<style type=text/css>";
-        $html .= "th{color: #fff; font-weight: bold; background-color: #aaa}";
-        $html .= "td{background-color: #000; color: #fff}";
+        $html .= "table{width: 100%; font-size: 11pt; align-content: center;}";
+        $html .= "table, th, td{border: 3px groove #cecece; border-collapse: collapse; text-align: center;}";
+        //$html .= "th{color: #fff; font-weight: bold; background-color: #aaa}";
+        //$html .= "td{background-color: #000; color: #fff}";
         $html .= "</style>";
         $html .= "<h2>Localidades de " . $prov . "</h2><h4>Actualmente: " . count($provincias) . " localidades</h4>";
         $html .= "<table width='100%'>";
@@ -108,21 +110,15 @@ $pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '
     }
     
     public function generarmpdf(){
-        $data = [];
-        //load the view and saved it into $html variable
-        $html=$this->load->view('welcome_message', $data, true);
- 
-        //this the the PDF filename that user will get to download
-        $pdfFilePath = "output_pdf_name.pdf";
- 
-        //load mPDF library
-        $this->load->library('m_pdf');
- 
-       //generate the PDF from the given html
-        $this->m_pdf->pdf->WriteHTML($html);
- 
-        //download it.
-        $this->m_pdf->pdf->Output($pdfFilePath, "D");  
+        $mpdf = new \Mpdf\Mpdf();
+
+       $mpdf->SetProtection(array('copy', 'print', 'modify'), 'password', 'superpass');
+
+       $mpdf->WriteHTML('www.invirtualweb.com');
+       $mpdf->WriteHTML('<b>Me puedo copiar?</b>');
+
+       // Output a PDF file directly to the browser
+       $mpdf->Output();
     }
 
 }
