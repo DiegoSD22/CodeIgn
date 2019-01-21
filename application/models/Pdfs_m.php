@@ -38,5 +38,10 @@ class Pdfs_m extends CI_Model
 		}
 			return $data["localidades"];
 	     }
-	}    
+	}
+        //CREATE USER 'diegosd'@'localhost' IDENTIFIED BY 'diegolm';
+        //GRANT ALL PRIVILEGES ON * . * TO 'diegosd'@'localhost';
+        
+        //CREATE USER 'gerardo22'@'localhost' IDENTIFIED BY 'gerardo22'; solo select, insert
+        //Dar permisos: GRANT [permiso] ON [nombre de bases de datos].[nombre de tabla] TO ‘[nombre de usuario]’@'localhost’;
 }

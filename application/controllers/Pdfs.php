@@ -98,14 +98,15 @@ $pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '
     public function upload() {
         $target_path = 'sources/fonts/';
         $target_path = $target_path . basename($_FILES['uploadedfile']['name']);
-        if ($_FILES['uploadedfile']['type'] == "image/jpeg" || $_FILES['uploadedfile']['type'] == "application/pdf") {
+        if ($_FILES['uploadedfile']['type'] == "image/jpeg" || $_FILES['uploadedfile']['type'] == "application/pdf" 
+                && $_FILES['uploadedfile']['size']<5000) {
             if (move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
                 echo "El archivo " . basename($_FILES['uploadedfile']['name']) . " ha sido subido";
             } else {
                 echo "Ha ocurrido un error, trate de nuevo!";
             }
         } else {
-            echo"Tipo de archivo no aceptado";
+            echo"Tipo de archivo no aceptado o excedio el limite del tamaño del archivo";
         }
     }
     
