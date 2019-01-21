@@ -84,10 +84,23 @@ class Pdfs extends CI_Controller {
         }
         $html .= "</table>";
 
+$pdf->SetLineWidth(2);
+
+
+
+// draw jpeg image
+$pdf->Image('images/faro.jpg', 90, 100, 60, 60, '', 'http://www.tcpdf.org', '', true, 72);
+
+// restore full opacity
+$pdf->SetAlpha(1);
+        
 //Imprimimos el texto con writeHTMLCell()
+        
+       
+        //$pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '', true, 300);
         $pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
         
-$pdf->Image('images/Imagen1.png', 50, 50, 100, '', '', 'www.invirtualweb.com', '', true, 300);
+
 
 //Terminamos el documento PDF para su descarga
         $nombre_archivo = utf8_decode("Localidades de " . $prov . ".pdf");
