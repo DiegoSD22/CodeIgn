@@ -174,7 +174,7 @@
                     $('#myModal').modal('show');
                     $('#myModal').find('.modal-title').text('Agregar nuevo usuario');
                     $('#myForm')[0].reset();
-                    $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/agregarUsuario") ?>');
+                    $('#myForm').attr('action', '<?php echo base_url("/index.php/usuarios/agregarUsuarioSP") ?>');
                 });
 
                 $('#btnSave').click(function () {

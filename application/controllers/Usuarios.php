@@ -85,6 +85,19 @@ class Usuarios extends CI_Controller {
         }
         echo json_encode($msg);
     }
+    
+    public function agregarUsuarioSP(){
+        $usuario= $this->input->post('txtUsuario');
+            $password= $this->input->post('txtPassword');
+            $tipo= $this->input->post('txtTipo');
+        $result= $this->m->agregarUsuarioSP($usuario, $password, $tipo);
+        $msg['success']=false;
+        $msg['type']='add';
+        if($result){
+            $msg['success']=true;
+        }
+        echo json_encode($msg);
+    }
 
 //Función para mostrar los datos de un usuario en especifico de la BD llamando al modelo    
     public function editarUsuario() {
