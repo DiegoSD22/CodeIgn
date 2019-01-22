@@ -46,6 +46,10 @@ class Usuarios extends CI_Controller {
         $this->load->view('usuarios/contacto_v');
 
     }
+    
+    public function cirrus(){
+        $this->load->view('cirrus');
+    }
 
 //Función para enviar un correo    
     public function enviacorreo() {
