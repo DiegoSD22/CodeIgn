@@ -14,3 +14,5 @@ Uso del Framework CodeIgniter, para fácil uso de la arquitectura MVC.
 
 ## •CRUD realizado.
 ![crud](https://user-images.githubusercontent.com/39284176/50015236-a8a93a80-ff8b-11e8-94ae-97b5ccf7a88c.PNG)
+
+### Ejemplo completo: http://pruebascentralinvirzo.com/diego/CodeIgniter/index.php/usuarios
