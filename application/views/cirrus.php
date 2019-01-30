@@ -8,15 +8,16 @@
     <meta name="description" content="A responsive and lightweight CSS framework.">
     <meta charset="UTF-8">
 
-       <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/cirrus.css')?>">
+       <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/cirrus.min.css')?>">
            <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/app.css')?>">
 
        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <!-- Syntax highlight code -->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/cirrus.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('sources/css2/nose.css')?>">
-    <script type="text/javascript" src="<?php echo base_url();?>sources/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/fontawesome.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>sources/js2/smoothscroll.js"></script>
   </head>
 
   <body>
@@ -24,7 +25,7 @@
             <div class="header-brand">
                 <div class="nav-item">
                     <a href="#landing" class="smoothScroll">
-                        <h6 class="title">Cirrus</h6>
+                        <h6 class="title"><span class="glyphicon glyphicon-cloud"></span> InvirtualWeb</h6>
                     </a>
                 </div>
                 <div class="nav-item nav-btn" id="header-btn">
@@ -36,7 +37,7 @@
             <div class="header-nav" id="header-menu">
                 <div class="nav-left text-center">
                     <div class="nav-item">
-                        <a href="https://github.com/Spiderpig86/Cirrus">
+                        <a href="https://github.com/DiegoSD22">
                         <span class="icon">
                         <i class="fa fa-github"></i>
                         </span>
@@ -52,32 +53,14 @@
                 </div>
                 <div class="nav-right text-center">
                     <div class="nav-item">
-                        <a href="#why" class="smoothScroll"><span class="icon"><i class="fa fa-question" aria-hidden="true"></i></span>Why Cirrus?</a>
-                    </div>
-                    <div class="nav-item has-sub" id="dropdown">
-                        <a class="nav-dropdown-link"><span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span> Docs</a>
-                        <ul class="dropdown-menu dropdown-animated dropdown-dark" role="menu">
-                            <li role="menu-item"><a href="#animations" class="smoothScroll">Animations</a></li>
-                            <li role="menu-item"><a href="#buttons" class="smoothScroll">Buttons</a></li>
-                            <li role="menu-item"><a href="#components" class="smoothScroll">Components</a></li>
-                            <li role="menu-item"><a href="#code" class="smoothScroll">Code</a></li>
-                            <li role="menu-item"><a href="#font" class="smoothScroll">Font</a></li>
-                            <li role="menu-item"><a href="#footer" class="smoothScroll">Footer</a></li>
-                            <li role="menu-item"><a href="#forms" class="smoothScroll">Forms</a></li>
-                            <li role="menu-item"><a href="#head" class="smoothScroll">Header</a></li>
-                            <li role="menu-item"><a href="#layout" class="smoothScroll">Layout</a></li>
-                            <li role="menu-item"><a href="#links" class="smoothScroll">Links</a></li>
-                            <li role="menu-item"><a href="#lists" class="smoothScroll">Lists</a></li>
-                            <li role="menu-item"><a href="#table" class="smoothScroll">Tables</a></li>
-                            <li role="menu-item"><a href="#utils" class="smoothScroll">Utils</a></li>
-                        </ul>
+                        <a href="<?php echo base_url() ?>index.php/consulta/inicioSesion" id="btnLogin" class="smoothScroll">Inicio Sesion</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <section id="landing" class="hero fullscreen">
-            <video preload="auto" autoplay="" loop="" class="fillWidth fadeIn video-fullscreen this-overlay" poster="<?php echo base_url('sources/fonts/Imagen1.png')?>">
+            <video preload="auto" autoplay="" loop="" class="fillWidth fadeIn video-fullscreen this-overlay" poster="<?php echo base_url('sources/fonts/proof.jpg')?>">
             <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Sky-High.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
             <source src="https://s3-us-west-2.amazonaws.com/coverr/webm/Sky-High.webm" type="video/webm">Your browser does not support the video tag. I suggest you upgrade your browser.
             </video>
