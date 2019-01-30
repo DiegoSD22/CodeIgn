@@ -40,7 +40,7 @@
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <!--<input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">-->
-              <a href="<?php echo base_url() ?>index.php/consulta/inicioSesion" id="btnLogin" class="smoothScroll"><button class="btn-outline center btn-animated">Inicio Sesion</button></a>
+              <a href="<?php echo base_url('index.php/consulta/inicioSesion') ?>" id="btnLogin" class="btn btn-outline center btn-animated"> Inicio Sesion</a>
           </form>
         </div>
       </nav>
