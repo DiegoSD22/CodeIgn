@@ -40,7 +40,7 @@
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <!--<input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">-->
-              <a href="<?php echo base_url() ?>index.php/consulta/inicioSesion" id="btnLogin" class="btn btn-outline-success my-2 my-sm-0">Inicio sesion</a>
+              <a href="<?php echo base_url() ?>index.php/consulta/inicioSesion" id="btnLogin" class="smoothScroll"><button class="btn-outline center btn-animated">Inicio Sesion</button></a>
           </form>
         </div>
       </nav>
@@ -64,7 +64,7 @@
               <div class="carousel-caption text-left">
                 <h1>Primer slide</h1>
                 <p>Texto si es que va haber</p>
-                <p><a class="btn btn-sm btn-primary" href="#" role="button">Boton</a></p>
+                <p><a class="this-inline-block" href="#"><button class="btn-primary">Boton</button></a></p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@
               <div class="carousel-caption">
                 <h1>Segundo slide</h1>
                 <p>Más texto</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Otro</a></p>
+                <p><a class="this-inline-block" href="#"><button class="btn-primary">Otro</button></a></p>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
               <div class="carousel-caption text-right">
                 <h1>Tercer slide</h1>
                 <p>Más texto</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Otro mas</a></p>
+                <p><a class="this-inline-block" href="#"><button class="btn-primary">Otro mas</button></a></p>
               </div>
             </div>
           </div>
@@ -108,19 +108,19 @@
             <img class="rounded-circle hover-grow" src="<?php echo base_url('sources/fonts/faro.jpg')?>" alt="Generic placeholder image" width="140" height="140">
             <h2>Titulo imagen</h2>
             <p>Texto de eso</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Boton imagen &raquo;</a></p>
+            <p><a class="btn btn-warning" href="#" role="button">Boton imagen &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle hover-grow" src="<?php echo base_url('sources/fonts/huella.png')?>" alt="Generic placeholder image" width="140" height="140">
             <h2>La segunda</h2>
             <p>Otra vez texto de esa imagen de arriba</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></p>
+            <p><a class="btn btn-warning" href="#" role="button">Ver detalles &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle hover-grow" src="<?php echo base_url('sources/fonts/planeta.png')?>" alt="Generic placeholder image" width="140" height="140">
             <h2>La tercera</h2>
             <p>Otra vez, lo mismo pero en la tercera</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Si quieres &raquo;</a></p>
+            <p><a class="btn btn-warning" href="#" role="button">Si quieres &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
