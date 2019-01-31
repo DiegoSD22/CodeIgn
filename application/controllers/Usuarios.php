@@ -50,6 +50,10 @@ class Usuarios extends CI_Controller {
     public function cirrus(){
         $this->load->view('cirrus');
     }
+    
+    public function fake(){
+        $this->load->view('fake');
+    }
 
 //Función para enviar un correo    
     public function enviacorreo() {
